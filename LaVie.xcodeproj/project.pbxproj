@@ -14,6 +14,9 @@
 		5D898220221DCDF400D4BE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D89821E221DCDF400D4BE1C /* LaunchScreen.storyboard */; };
 		5D89822B221DCDF400D4BE1C /* LaVieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D89822A221DCDF400D4BE1C /* LaVieTests.swift */; };
 		5D898236221DCDF400D4BE1C /* LaVieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D898235221DCDF400D4BE1C /* LaVieUITests.swift */; };
+		764AA71F40B0C1684AE338F8 /* Pods_LaVieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A1A7A45C0A442175BC4730 /* Pods_LaVieTests.framework */; };
+		907A0B46125497B6F405DDB9 /* Pods_LaVie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1046D9E25F005F402FAD432A /* Pods_LaVie.framework */; };
+		E40372A4D86B9FCEF333EE7F /* Pods_LaVieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500B1656AC932FA2F79A4FBB /* Pods_LaVieUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1046D9E25F005F402FAD432A /* Pods_LaVie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B6DE41EC0AEF5E2976CAC0E /* Pods-LaVie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVie.release.xcconfig"; path = "Target Support Files/Pods-LaVie/Pods-LaVie.release.xcconfig"; sourceTree = "<group>"; };
+		4AA1584FFF9E79C93C0F2D61 /* Pods-LaVieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.release.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.release.xcconfig"; sourceTree = "<group>"; };
+		500B1656AC932FA2F79A4FBB /* Pods_LaVieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D898212221DCDF400D4BE1C /* LaVie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaVie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D898215221DCDF400D4BE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D898217221DCDF400D4BE1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,11 @@
 		5D898231221DCDF400D4BE1C /* LaVieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaVieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D898235221DCDF400D4BE1C /* LaVieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaVieUITests.swift; sourceTree = "<group>"; };
 		5D898237221DCDF400D4BE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62F17A17378B66ADA0819F32 /* Pods-LaVieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieUITests.release.xcconfig"; path = "Target Support Files/Pods-LaVieUITests/Pods-LaVieUITests.release.xcconfig"; sourceTree = "<group>"; };
+		85F0F04FB8D57420EBFE0EB3 /* Pods-LaVie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVie.debug.xcconfig"; path = "Target Support Files/Pods-LaVie/Pods-LaVie.debug.xcconfig"; sourceTree = "<group>"; };
+		A46B8946200DCCC79F03C1C9 /* Pods-LaVieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.debug.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4A1A7A45C0A442175BC4730 /* Pods_LaVieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF00FD51BD3C87DE4854D496 /* Pods-LaVieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieUITests.debug.xcconfig"; path = "Target Support Files/Pods-LaVieUITests/Pods-LaVieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				907A0B46125497B6F405DDB9 /* Pods_LaVie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764AA71F40B0C1684AE338F8 /* Pods_LaVieTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40372A4D86B9FCEF333EE7F /* Pods_LaVieUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		464A35A5CEDA6CE5AAC58F62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85F0F04FB8D57420EBFE0EB3 /* Pods-LaVie.debug.xcconfig */,
+				1B6DE41EC0AEF5E2976CAC0E /* Pods-LaVie.release.xcconfig */,
+				A46B8946200DCCC79F03C1C9 /* Pods-LaVieTests.debug.xcconfig */,
+				4AA1584FFF9E79C93C0F2D61 /* Pods-LaVieTests.release.xcconfig */,
+				BF00FD51BD3C87DE4854D496 /* Pods-LaVieUITests.debug.xcconfig */,
+				62F17A17378B66ADA0819F32 /* Pods-LaVieUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5D898209221DCDF400D4BE1C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +110,8 @@
 				5D898229221DCDF400D4BE1C /* LaVieTests */,
 				5D898234221DCDF400D4BE1C /* LaVieUITests */,
 				5D898213221DCDF400D4BE1C /* Products */,
+				464A35A5CEDA6CE5AAC58F62 /* Pods */,
+				8A5F999A15ADA4BA816C88C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +156,16 @@
 			path = LaVieUITests;
 			sourceTree = "<group>";
 		};
+		8A5F999A15ADA4BA816C88C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1046D9E25F005F402FAD432A /* Pods_LaVie.framework */,
+				B4A1A7A45C0A442175BC4730 /* Pods_LaVieTests.framework */,
+				500B1656AC932FA2F79A4FBB /* Pods_LaVieUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +173,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D89823A221DCDF400D4BE1C /* Build configuration list for PBXNativeTarget "LaVie" */;
 			buildPhases = (
+				EB19CB7DDA0E3D1F0904FF6E /* [CP] Check Pods Manifest.lock */,
 				5D89820E221DCDF400D4BE1C /* Sources */,
 				5D89820F221DCDF400D4BE1C /* Frameworks */,
 				5D898210221DCDF400D4BE1C /* Resources */,
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D89823D221DCDF400D4BE1C /* Build configuration list for PBXNativeTarget "LaVieTests" */;
 			buildPhases = (
+				DC561711B04BDB68D5D4D71B /* [CP] Check Pods Manifest.lock */,
 				5D898222221DCDF400D4BE1C /* Sources */,
 				5D898223221DCDF400D4BE1C /* Frameworks */,
 				5D898224221DCDF400D4BE1C /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D898240221DCDF400D4BE1C /* Build configuration list for PBXNativeTarget "LaVieUITests" */;
 			buildPhases = (
+				CA885019874DF1011C094197 /* [CP] Check Pods Manifest.lock */,
 				5D89822D221DCDF400D4BE1C /* Sources */,
 				5D89822E221DCDF400D4BE1C /* Frameworks */,
 				5D89822F221DCDF400D4BE1C /* Resources */,
@@ -250,6 +294,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA885019874DF1011C094197 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LaVieUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC561711B04BDB68D5D4D71B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LaVieTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB19CB7DDA0E3D1F0904FF6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LaVie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D89820E221DCDF400D4BE1C /* Sources */ = {
@@ -430,6 +543,7 @@
 		};
 		5D89823B221DCDF400D4BE1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85F0F04FB8D57420EBFE0EB3 /* Pods-LaVie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +561,7 @@
 		};
 		5D89823C221DCDF400D4BE1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B6DE41EC0AEF5E2976CAC0E /* Pods-LaVie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +579,7 @@
 		};
 		5D89823E221DCDF400D4BE1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A46B8946200DCCC79F03C1C9 /* Pods-LaVieTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +600,7 @@
 		};
 		5D89823F221DCDF400D4BE1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA1584FFF9E79C93C0F2D61 /* Pods-LaVieTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,6 +621,7 @@
 		};
 		5D898241221DCDF400D4BE1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF00FD51BD3C87DE4854D496 /* Pods-LaVieUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +641,7 @@
 		};
 		5D898242221DCDF400D4BE1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62F17A17378B66ADA0819F32 /* Pods-LaVieUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
