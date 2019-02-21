@@ -6,8 +6,8 @@ target 'LaVie' do
   use_frameworks!
 
   # Pods for LaVie
-  pod 'YogaKit', '~> 1.7'
-  pod 'MaterialComponents/AppBar'
+  pod 'YogaKit'
+  pod 'Material'
 
   target 'LaVieTests' do
     inherit! :search_paths
