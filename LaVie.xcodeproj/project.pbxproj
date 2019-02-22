@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D63A8CD221F581600871932 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8CC221F581600871932 /* Theme.swift */; };
+		5D63A8D1221F610600871932 /* LVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D0221F610600871932 /* LVViewController.swift */; };
+		5D63A8D3221F62CA00871932 /* LVTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D2221F62CA00871932 /* LVTabsController.swift */; };
+		5D63A8D5221F63C800871932 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D4221F63C800871932 /* HomeViewController.swift */; };
+		5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D6221F656100871932 /* LVFlatList.swift */; };
 		5D898216221DCDF400D4BE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D898215221DCDF400D4BE1C /* AppDelegate.swift */; };
-		5D898218221DCDF400D4BE1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D898217221DCDF400D4BE1C /* ViewController.swift */; };
-		5D89821B221DCDF400D4BE1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D898219221DCDF400D4BE1C /* Main.storyboard */; };
 		5D89821D221DCDF400D4BE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D89821C221DCDF400D4BE1C /* Assets.xcassets */; };
 		5D898220221DCDF400D4BE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D89821E221DCDF400D4BE1C /* LaunchScreen.storyboard */; };
 		5D89822B221DCDF400D4BE1C /* LaVieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D89822A221DCDF400D4BE1C /* LaVieTests.swift */; };
 		5D898236221DCDF400D4BE1C /* LaVieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D898235221DCDF400D4BE1C /* LaVieUITests.swift */; };
+		5DF47ED4221F56ED008F2D88 /* LVTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF47ED3221F56ED008F2D88 /* LVTabController.swift */; };
 		764AA71F40B0C1684AE338F8 /* Pods_LaVieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A1A7A45C0A442175BC4730 /* Pods_LaVieTests.framework */; };
 		907A0B46125497B6F405DDB9 /* Pods_LaVie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1046D9E25F005F402FAD432A /* Pods_LaVie.framework */; };
 		E40372A4D86B9FCEF333EE7F /* Pods_LaVieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500B1656AC932FA2F79A4FBB /* Pods_LaVieUITests.framework */; };
@@ -41,10 +45,13 @@
 		1B6DE41EC0AEF5E2976CAC0E /* Pods-LaVie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVie.release.xcconfig"; path = "Target Support Files/Pods-LaVie/Pods-LaVie.release.xcconfig"; sourceTree = "<group>"; };
 		4AA1584FFF9E79C93C0F2D61 /* Pods-LaVieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.release.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.release.xcconfig"; sourceTree = "<group>"; };
 		500B1656AC932FA2F79A4FBB /* Pods_LaVieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D63A8CC221F581600871932 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		5D63A8D0221F610600871932 /* LVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVViewController.swift; sourceTree = "<group>"; };
+		5D63A8D2221F62CA00871932 /* LVTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabsController.swift; sourceTree = "<group>"; };
+		5D63A8D4221F63C800871932 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5D63A8D6221F656100871932 /* LVFlatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVFlatList.swift; sourceTree = "<group>"; };
 		5D898212221DCDF400D4BE1C /* LaVie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaVie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D898215221DCDF400D4BE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D898217221DCDF400D4BE1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5D89821A221DCDF400D4BE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D89821C221DCDF400D4BE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D89821F221DCDF400D4BE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D898221221DCDF400D4BE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +61,7 @@
 		5D898231221DCDF400D4BE1C /* LaVieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaVieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D898235221DCDF400D4BE1C /* LaVieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaVieUITests.swift; sourceTree = "<group>"; };
 		5D898237221DCDF400D4BE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DF47ED3221F56ED008F2D88 /* LVTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabController.swift; sourceTree = "<group>"; };
 		62F17A17378B66ADA0819F32 /* Pods-LaVieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieUITests.release.xcconfig"; path = "Target Support Files/Pods-LaVieUITests/Pods-LaVieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85F0F04FB8D57420EBFE0EB3 /* Pods-LaVie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVie.debug.xcconfig"; path = "Target Support Files/Pods-LaVie/Pods-LaVie.debug.xcconfig"; sourceTree = "<group>"; };
 		A46B8946200DCCC79F03C1C9 /* Pods-LaVieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.debug.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,9 +135,9 @@
 		5D898214221DCDF400D4BE1C /* LaVie */ = {
 			isa = PBXGroup;
 			children = (
+				5DF47ED2221F56CC008F2D88 /* Utils */,
+				5DF47ED1221F56BF008F2D88 /* Screens */,
 				5D898215221DCDF400D4BE1C /* AppDelegate.swift */,
-				5D898217221DCDF400D4BE1C /* ViewController.swift */,
-				5D898219221DCDF400D4BE1C /* Main.storyboard */,
 				5D89821C221DCDF400D4BE1C /* Assets.xcassets */,
 				5D89821E221DCDF400D4BE1C /* LaunchScreen.storyboard */,
 				5D898221221DCDF400D4BE1C /* Info.plist */,
@@ -153,6 +161,26 @@
 				5D898237221DCDF400D4BE1C /* Info.plist */,
 			);
 			path = LaVieUITests;
+			sourceTree = "<group>";
+		};
+		5DF47ED1221F56BF008F2D88 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5D63A8D4221F63C800871932 /* HomeViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5DF47ED2221F56CC008F2D88 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5DF47ED3221F56ED008F2D88 /* LVTabController.swift */,
+				5D63A8CC221F581600871932 /* Theme.swift */,
+				5D63A8D0221F610600871932 /* LVViewController.swift */,
+				5D63A8D2221F62CA00871932 /* LVTabsController.swift */,
+				5D63A8D6221F656100871932 /* LVFlatList.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		8A5F999A15ADA4BA816C88C2 /* Frameworks */ = {
@@ -275,7 +303,6 @@
 			files = (
 				5D898220221DCDF400D4BE1C /* LaunchScreen.storyboard in Resources */,
 				5D89821D221DCDF400D4BE1C /* Assets.xcassets in Resources */,
-				5D89821B221DCDF400D4BE1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,14 +332,8 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LaVie/Pods-LaVie-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
-				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
-				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
 				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
 			);
@@ -320,14 +341,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
 			);
@@ -409,7 +424,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D898218221DCDF400D4BE1C /* ViewController.swift in Sources */,
+				5D63A8D1221F610600871932 /* LVViewController.swift in Sources */,
+				5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */,
+				5D63A8CD221F581600871932 /* Theme.swift in Sources */,
+				5D63A8D3221F62CA00871932 /* LVTabsController.swift in Sources */,
+				5DF47ED4221F56ED008F2D88 /* LVTabController.swift in Sources */,
+				5D63A8D5221F63C800871932 /* HomeViewController.swift in Sources */,
 				5D898216221DCDF400D4BE1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,14 +466,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5D898219221DCDF400D4BE1C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D89821A221DCDF400D4BE1C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5D89821E221DCDF400D4BE1C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
