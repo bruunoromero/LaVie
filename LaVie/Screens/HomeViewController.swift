@@ -10,13 +10,17 @@ import UIKit
 import YogaKit
 
 class HomeViewController: LVTabController {
+    var tableView: LVFlatList<String>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addTableView()
+        tableView = addTableView()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.tableView?.update(data: ["a", "b", "c"])
+        }
     }
     
-    func addTableView() {
+    func addTableView() -> LVFlatList<String> {
         let cellBuilder = { (el: String, cell: UITableViewCell) -> UITableViewCell in
             cell.textLabel?.text = el
             return cell
@@ -28,6 +32,7 @@ class HomeViewController: LVTabController {
                 .with(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         
         view.addSubview(tableView)
+        return tableView
     }
     
 }

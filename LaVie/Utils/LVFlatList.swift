@@ -45,7 +45,9 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     func update(data: [T]) {
         self.data = data
-        reloadData()
+        DispatchQueue.main.async {
+            self.reloadData()
+        }
     }
     
     func with(data: [T]) -> LVFlatList {
