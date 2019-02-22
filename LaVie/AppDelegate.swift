@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let tabs = [
-            UINavigationController(rootViewController: HomeViewController(title: "Home", icon: Icon.home))
+            UINavigationController(rootViewController: HomeViewController(title: "Home", icon: Icon.home)),
+            UINavigationController(rootViewController: HomeViewController(title: "Other Home", icon: Icon.addCircle))
         ]
         
         

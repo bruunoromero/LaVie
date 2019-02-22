@@ -55,6 +55,11 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
         return self
     }
     
+    func with(extraCells: Bool) -> LVFlatList {
+        self.tableFooterView = extraCells ? nil : UIView()
+        return self
+    }
+    
     func with(cell: AnyClass) -> LVFlatList {
         self.register(cell, forCellReuseIdentifier: identifier)
         return self
