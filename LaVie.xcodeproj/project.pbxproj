@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0880F21A3A0629CD79F94215 /* Pods_LaVieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C00DF236D7FAF0DC2619D8 /* Pods_LaVieUITests.framework */; };
+		5D10CEF7222361AD00205B27 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D10CEF6222361AD00205B27 /* GoalViewController.swift */; };
+		5D3F4AE6222324A900B13FF8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F4AE5222324A900B13FF8 /* GoalCell.swift */; };
+		5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F4AE8222324DF00B13FF8 /* Goal.swift */; };
 		5D63A8CD221F581600871932 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8CC221F581600871932 /* Theme.swift */; };
 		5D63A8D1221F610600871932 /* LVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D0221F610600871932 /* LVViewController.swift */; };
 		5D63A8D3221F62CA00871932 /* LVTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D2221F62CA00871932 /* LVTabsController.swift */; };
@@ -18,9 +22,8 @@
 		5D89822B221DCDF400D4BE1C /* LaVieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D89822A221DCDF400D4BE1C /* LaVieTests.swift */; };
 		5D898236221DCDF400D4BE1C /* LaVieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D898235221DCDF400D4BE1C /* LaVieUITests.swift */; };
 		5DF47ED4221F56ED008F2D88 /* LVTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF47ED3221F56ED008F2D88 /* LVTabController.swift */; };
-		764AA71F40B0C1684AE338F8 /* Pods_LaVieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A1A7A45C0A442175BC4730 /* Pods_LaVieTests.framework */; };
-		907A0B46125497B6F405DDB9 /* Pods_LaVie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1046D9E25F005F402FAD432A /* Pods_LaVie.framework */; };
-		E40372A4D86B9FCEF333EE7F /* Pods_LaVieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500B1656AC932FA2F79A4FBB /* Pods_LaVieUITests.framework */; };
+		862BDD84713DC841B67CD60E /* Pods_LaVieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90ED558A089D3922BAEEF4B /* Pods_LaVieTests.framework */; };
+		AAF502127DF91870EFFAA634 /* Pods_LaVie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C19F279F09D4B3C8AB4536E /* Pods_LaVie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1046D9E25F005F402FAD432A /* Pods_LaVie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B6DE41EC0AEF5E2976CAC0E /* Pods-LaVie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVie.release.xcconfig"; path = "Target Support Files/Pods-LaVie/Pods-LaVie.release.xcconfig"; sourceTree = "<group>"; };
-		4AA1584FFF9E79C93C0F2D61 /* Pods-LaVieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.release.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.release.xcconfig"; sourceTree = "<group>"; };
-		500B1656AC932FA2F79A4FBB /* Pods_LaVieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05201C67F33E3DFEDC1AC5FE /* Pods-LaVie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVie.debug.xcconfig"; path = "Target Support Files/Pods-LaVie/Pods-LaVie.debug.xcconfig"; sourceTree = "<group>"; };
+		2C19F279F09D4B3C8AB4536E /* Pods_LaVie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34BA88A6E2906DB4AF280F69 /* Pods-LaVieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieUITests.debug.xcconfig"; path = "Target Support Files/Pods-LaVieUITests/Pods-LaVieUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4073E1B04FF03196EDA1F659 /* Pods-LaVieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.debug.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D10CEF6222361AD00205B27 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
+		5D3F4AE5222324A900B13FF8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		5D3F4AE8222324DF00B13FF8 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		5D63A8CC221F581600871932 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		5D63A8D0221F610600871932 /* LVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVViewController.swift; sourceTree = "<group>"; };
 		5D63A8D2221F62CA00871932 /* LVTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabsController.swift; sourceTree = "<group>"; };
@@ -62,11 +68,11 @@
 		5D898235221DCDF400D4BE1C /* LaVieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaVieUITests.swift; sourceTree = "<group>"; };
 		5D898237221DCDF400D4BE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DF47ED3221F56ED008F2D88 /* LVTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabController.swift; sourceTree = "<group>"; };
-		62F17A17378B66ADA0819F32 /* Pods-LaVieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieUITests.release.xcconfig"; path = "Target Support Files/Pods-LaVieUITests/Pods-LaVieUITests.release.xcconfig"; sourceTree = "<group>"; };
-		85F0F04FB8D57420EBFE0EB3 /* Pods-LaVie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVie.debug.xcconfig"; path = "Target Support Files/Pods-LaVie/Pods-LaVie.debug.xcconfig"; sourceTree = "<group>"; };
-		A46B8946200DCCC79F03C1C9 /* Pods-LaVieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.debug.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B4A1A7A45C0A442175BC4730 /* Pods_LaVieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF00FD51BD3C87DE4854D496 /* Pods-LaVieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieUITests.debug.xcconfig"; path = "Target Support Files/Pods-LaVieUITests/Pods-LaVieUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A29E00AAFD6C3EB27072C51F /* Pods-LaVieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.release.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.release.xcconfig"; sourceTree = "<group>"; };
+		E4C00DF236D7FAF0DC2619D8 /* Pods_LaVieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90ED558A089D3922BAEEF4B /* Pods_LaVieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33D041D97A4BF6EB0C867EB /* Pods-LaVieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieUITests.release.xcconfig"; path = "Target Support Files/Pods-LaVieUITests/Pods-LaVieUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F7AECAD9360D8A91AC2C1855 /* Pods-LaVie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVie.release.xcconfig"; path = "Target Support Files/Pods-LaVie/Pods-LaVie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				907A0B46125497B6F405DDB9 /* Pods_LaVie.framework in Frameworks */,
+				AAF502127DF91870EFFAA634 /* Pods_LaVie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				764AA71F40B0C1684AE338F8 /* Pods_LaVieTests.framework in Frameworks */,
+				862BDD84713DC841B67CD60E /* Pods_LaVieTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E40372A4D86B9FCEF333EE7F /* Pods_LaVieUITests.framework in Frameworks */,
+				0880F21A3A0629CD79F94215 /* Pods_LaVieUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,14 +106,58 @@
 		464A35A5CEDA6CE5AAC58F62 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				85F0F04FB8D57420EBFE0EB3 /* Pods-LaVie.debug.xcconfig */,
-				1B6DE41EC0AEF5E2976CAC0E /* Pods-LaVie.release.xcconfig */,
-				A46B8946200DCCC79F03C1C9 /* Pods-LaVieTests.debug.xcconfig */,
-				4AA1584FFF9E79C93C0F2D61 /* Pods-LaVieTests.release.xcconfig */,
-				BF00FD51BD3C87DE4854D496 /* Pods-LaVieUITests.debug.xcconfig */,
-				62F17A17378B66ADA0819F32 /* Pods-LaVieUITests.release.xcconfig */,
+				05201C67F33E3DFEDC1AC5FE /* Pods-LaVie.debug.xcconfig */,
+				F7AECAD9360D8A91AC2C1855 /* Pods-LaVie.release.xcconfig */,
+				4073E1B04FF03196EDA1F659 /* Pods-LaVieTests.debug.xcconfig */,
+				A29E00AAFD6C3EB27072C51F /* Pods-LaVieTests.release.xcconfig */,
+				34BA88A6E2906DB4AF280F69 /* Pods-LaVieUITests.debug.xcconfig */,
+				F33D041D97A4BF6EB0C867EB /* Pods-LaVieUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4FA0620FCA002FC50E4B3D1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C19F279F09D4B3C8AB4536E /* Pods_LaVie.framework */,
+				E90ED558A089D3922BAEEF4B /* Pods_LaVieTests.framework */,
+				E4C00DF236D7FAF0DC2619D8 /* Pods_LaVieUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D10CEF42223618900205B27 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				5D10CEF52223619E00205B27 /* Goal */,
+				5D3F4AE42223245000B13FF8 /* Home */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		5D10CEF52223619E00205B27 /* Goal */ = {
+			isa = PBXGroup;
+			children = (
+				5D10CEF6222361AD00205B27 /* GoalViewController.swift */,
+			);
+			path = Goal;
+			sourceTree = "<group>";
+		};
+		5D3F4AE42223245000B13FF8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5D63A8D4221F63C800871932 /* HomeViewController.swift */,
+				5D3F4AE5222324A900B13FF8 /* GoalCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5D3F4AE7222324CE00B13FF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D3F4AE8222324DF00B13FF8 /* Goal.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5D898209221DCDF400D4BE1C = {
@@ -118,7 +168,7 @@
 				5D898234221DCDF400D4BE1C /* LaVieUITests */,
 				5D898213221DCDF400D4BE1C /* Products */,
 				464A35A5CEDA6CE5AAC58F62 /* Pods */,
-				8A5F999A15ADA4BA816C88C2 /* Frameworks */,
+				4FA0620FCA002FC50E4B3D1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +185,7 @@
 		5D898214221DCDF400D4BE1C /* LaVie */ = {
 			isa = PBXGroup;
 			children = (
+				5D3F4AE7222324CE00B13FF8 /* Models */,
 				5DF47ED2221F56CC008F2D88 /* Utils */,
 				5DF47ED1221F56BF008F2D88 /* Screens */,
 				5D898215221DCDF400D4BE1C /* AppDelegate.swift */,
@@ -166,7 +217,7 @@
 		5DF47ED1221F56BF008F2D88 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				5D63A8D4221F63C800871932 /* HomeViewController.swift */,
+				5D10CEF42223618900205B27 /* Goals */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -183,16 +234,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		8A5F999A15ADA4BA816C88C2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1046D9E25F005F402FAD432A /* Pods_LaVie.framework */,
-				B4A1A7A45C0A442175BC4730 /* Pods_LaVieTests.framework */,
-				500B1656AC932FA2F79A4FBB /* Pods_LaVieUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,11 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D89823A221DCDF400D4BE1C /* Build configuration list for PBXNativeTarget "LaVie" */;
 			buildPhases = (
-				EB19CB7DDA0E3D1F0904FF6E /* [CP] Check Pods Manifest.lock */,
+				6C9F91542460DD8D98964B17 /* [CP] Check Pods Manifest.lock */,
 				5D89820E221DCDF400D4BE1C /* Sources */,
 				5D89820F221DCDF400D4BE1C /* Frameworks */,
 				5D898210221DCDF400D4BE1C /* Resources */,
-				AA1F65B04E052B0C6A3B3F51 /* [CP] Embed Pods Frameworks */,
+				F89F8B987D6E24DE3ABEB097 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,7 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D89823D221DCDF400D4BE1C /* Build configuration list for PBXNativeTarget "LaVieTests" */;
 			buildPhases = (
-				DC561711B04BDB68D5D4D71B /* [CP] Check Pods Manifest.lock */,
+				536BDB0FAE53C7D8FEFD4304 /* [CP] Check Pods Manifest.lock */,
 				5D898222221DCDF400D4BE1C /* Sources */,
 				5D898223221DCDF400D4BE1C /* Frameworks */,
 				5D898224221DCDF400D4BE1C /* Resources */,
@@ -238,7 +279,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D898240221DCDF400D4BE1C /* Build configuration list for PBXNativeTarget "LaVieUITests" */;
 			buildPhases = (
-				CA885019874DF1011C094197 /* [CP] Check Pods Manifest.lock */,
+				8D07D18F59BC8F3B228016FC /* [CP] Check Pods Manifest.lock */,
 				5D89822D221DCDF400D4BE1C /* Sources */,
 				5D89822E221DCDF400D4BE1C /* Frameworks */,
 				5D89822F221DCDF400D4BE1C /* Resources */,
@@ -323,57 +364,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AA1F65B04E052B0C6A3B3F51 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LaVie/Pods-LaVie-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
-				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
-				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
-				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LaVie/Pods-LaVie-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CA885019874DF1011C094197 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LaVieUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC561711B04BDB68D5D4D71B /* [CP] Check Pods Manifest.lock */ = {
+		536BDB0FAE53C7D8FEFD4304 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -395,7 +386,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EB19CB7DDA0E3D1F0904FF6E /* [CP] Check Pods Manifest.lock */ = {
+		6C9F91542460DD8D98964B17 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -417,6 +408,58 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8D07D18F59BC8F3B228016FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LaVieUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F89F8B987D6E24DE3ABEB097 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LaVie/Pods-LaVie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LaVie/Pods-LaVie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -425,11 +468,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D63A8D1221F610600871932 /* LVViewController.swift in Sources */,
+				5D10CEF7222361AD00205B27 /* GoalViewController.swift in Sources */,
 				5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */,
 				5D63A8CD221F581600871932 /* Theme.swift in Sources */,
 				5D63A8D3221F62CA00871932 /* LVTabsController.swift in Sources */,
+				5D3F4AE6222324A900B13FF8 /* GoalCell.swift in Sources */,
 				5DF47ED4221F56ED008F2D88 /* LVTabController.swift in Sources */,
 				5D63A8D5221F63C800871932 /* HomeViewController.swift in Sources */,
+				5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */,
 				5D898216221DCDF400D4BE1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,7 +641,7 @@
 		};
 		5D89823B221DCDF400D4BE1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85F0F04FB8D57420EBFE0EB3 /* Pods-LaVie.debug.xcconfig */;
+			baseConfigurationReference = 05201C67F33E3DFEDC1AC5FE /* Pods-LaVie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -613,7 +659,7 @@
 		};
 		5D89823C221DCDF400D4BE1C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B6DE41EC0AEF5E2976CAC0E /* Pods-LaVie.release.xcconfig */;
+			baseConfigurationReference = F7AECAD9360D8A91AC2C1855 /* Pods-LaVie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -631,7 +677,7 @@
 		};
 		5D89823E221DCDF400D4BE1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A46B8946200DCCC79F03C1C9 /* Pods-LaVieTests.debug.xcconfig */;
+			baseConfigurationReference = 4073E1B04FF03196EDA1F659 /* Pods-LaVieTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -652,7 +698,7 @@
 		};
 		5D89823F221DCDF400D4BE1C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AA1584FFF9E79C93C0F2D61 /* Pods-LaVieTests.release.xcconfig */;
+			baseConfigurationReference = A29E00AAFD6C3EB27072C51F /* Pods-LaVieTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -673,7 +719,7 @@
 		};
 		5D898241221DCDF400D4BE1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF00FD51BD3C87DE4854D496 /* Pods-LaVieUITests.debug.xcconfig */;
+			baseConfigurationReference = 34BA88A6E2906DB4AF280F69 /* Pods-LaVieUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -693,7 +739,7 @@
 		};
 		5D898242221DCDF400D4BE1C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62F17A17378B66ADA0819F32 /* Pods-LaVieUITests.release.xcconfig */;
+			baseConfigurationReference = F33D041D97A4BF6EB0C867EB /* Pods-LaVieUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

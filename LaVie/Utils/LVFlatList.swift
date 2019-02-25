@@ -26,13 +26,15 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
     init(data: [T], builder: @escaping (T, UITableViewCell) -> UITableViewCell) {
         self.data = data
         self.builder = builder
-        self.identifier = "MyCell"
+        self.identifier = "LVFlatListCell"
         
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: .plain)
         
         self.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
         self.delegate = self
         self.dataSource = self
+        self.separatorStyle = .none
+        self.rowHeight = UITableView.automaticDimension
     }
     
     convenience init(builder: @escaping (T, UITableViewCell) -> UITableViewCell) {

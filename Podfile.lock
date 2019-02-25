@@ -6,27 +6,31 @@ PODS:
   - Motion (1.4.3):
     - Motion/Core (= 1.4.3)
   - Motion/Core (1.4.3)
+  - SnapKit (4.0.1)
   - Yoga (1.9.0)
   - YogaKit (1.9.0):
     - Yoga (~> 1.9)
 
 DEPENDENCIES:
   - Material
+  - SnapKit (~> 4.0.0)
   - YogaKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Material
     - Motion
+    - SnapKit
     - Yoga
     - YogaKit
 
 SPEC CHECKSUMS:
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   Yoga: aaae8abea68951f60bee05f6277d3eed90bb91bb
   YogaKit: d447a9bb808718e6f58e52a2255a8050081a3ead
 
-PODFILE CHECKSUM: b4a587b684948d960300aab5eaba41ba57176d67
+PODFILE CHECKSUM: b348e1793d1105d55e10684a659cb1678782c131
 
 COCOAPODS: 1.6.0

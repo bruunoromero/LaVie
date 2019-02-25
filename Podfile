@@ -8,6 +8,7 @@ target 'LaVie' do
   # Pods for LaVie
   pod 'YogaKit'
   pod 'Material'
+  pod 'SnapKit', '~> 4.0.0'
 
   target 'LaVieTests' do
     inherit! :search_paths
