@@ -8,19 +8,36 @@
 
 import UIKit
 
+
+
 class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
+    typealias Event = (T) -> Void
+    
     var data: [T]?
+    var onSelect: Event?
     var identifier: String
     var builder: (T, UITableViewCell) -> UITableViewCell
+    
+    func element(for indexPath: IndexPath) -> T {
+        return data![indexPath.row]
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let el = data![indexPath.row]
+        let el = element(for: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath as IndexPath)
         return builder(el, cell)
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let el = element(for: indexPath)
+        print("hey")
+        if let onSelect = onSelect {
+            onSelect(el)
+        }
     }
     
     init(data: [T], builder: @escaping (T, UITableViewCell) -> UITableViewCell) {
@@ -33,7 +50,6 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
         self.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
         self.delegate = self
         self.dataSource = self
-        self.separatorStyle = .none
         self.rowHeight = UITableView.automaticDimension
     }
     
@@ -69,6 +85,11 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     func with(frame: CGRect) -> LVFlatList{
         self.frame = frame
+        return self
+    }
+    
+    func with(selection: @escaping Event) -> LVFlatList {
+        self.onSelect = selection
         return self
     }
 }

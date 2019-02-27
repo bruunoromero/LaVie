@@ -23,34 +23,6 @@ class HomeViewController: LVTabController {
             
             return goalCell
                     .with(goal: el)
-                    .with(onPress: {
-                        UIView.animate(
-                            withDuration: 0.3,
-                            delay: 0,
-                            usingSpringWithDamping: 0.5,
-                            initialSpringVelocity: 5,
-                            options: .curveEaseInOut,
-                            animations: {
-                                goalCell.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
-                            },
-                            completion: nil
-                        )
-                    })
-                    .with(onPressEnded: {
-                        UIView.animate(
-                            withDuration: 0.3,
-                            delay: 0,
-                            usingSpringWithDamping: 0.5,
-                            initialSpringVelocity: 5,
-                            options: .curveEaseInOut,
-                            animations: {
-                                goalCell.transform = .identity
-                            },
-                            completion: nil
-                        )
-                        
-//                        self.navigationController?.pushViewController(GoalViewController(goal: el), animated: true)
-                    })
         }
         
         let tableView =
@@ -59,6 +31,9 @@ class HomeViewController: LVTabController {
                 .with(extraCells: false)
                 .with(cell: GoalCell.self)
                 .with(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+                .with(selection: { goal in
+                    self.navigationController?.pushViewController(GoalViewController(goal: goal), animated: true)
+                })
 
         view.addSubview(tableView)
         return tableView
