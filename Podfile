@@ -8,7 +8,9 @@ target 'LaVie' do
   # Pods for LaVie
   pod 'YogaKit'
   pod 'Material'
-  pod 'RenderNeutrino'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'Eureka', '~> 4.3.1'
   pod 'SnapKit', '~> 4.0.0'
 
   target 'LaVieTests' do

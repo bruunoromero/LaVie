@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import Material
 
 @UIApplicationMain
@@ -17,10 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         
         let tabs = [
-            UINavigationController(rootViewController: HomeViewController(title: "Home", icon: Icon.home)),
-            UINavigationController(rootViewController: HomeViewController(title: "Other Home", icon: Icon.addCircle))
+            UINavigationController(rootViewController: GoalListViewController(title: "Home", icon: Icon.home)),
+            UINavigationController(rootViewController: GoalListViewController(title: "Other Home", icon: Icon.addCircle))
         ]
         
         

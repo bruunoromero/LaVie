@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0880F21A3A0629CD79F94215 /* Pods_LaVieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C00DF236D7FAF0DC2619D8 /* Pods_LaVieUITests.framework */; };
-		5D10CEF7222361AD00205B27 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D10CEF6222361AD00205B27 /* GoalViewController.swift */; };
+		5D10CEF7222361AD00205B27 /* GoalShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D10CEF6222361AD00205B27 /* GoalShowViewController.swift */; };
 		5D3F4AE6222324A900B13FF8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F4AE5222324A900B13FF8 /* GoalCell.swift */; };
 		5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F4AE8222324DF00B13FF8 /* Goal.swift */; };
+		5D4B5FA92226FAF100BA173D /* GoalCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FA82226FAF100BA173D /* GoalCreateViewController.swift */; };
+		5D4B5FAB2226FCB900BA173D /* LVModalViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAA2226FCB900BA173D /* LVModalViewManager.swift */; };
+		5D4B5FAD2227055900BA173D /* LVViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAC2227055900BA173D /* LVViewManager.swift */; };
+		5D4B5FAF2227376E00BA173D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAE2227376E00BA173D /* GoogleService-Info.plist */; };
 		5D63A8CD221F581600871932 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8CC221F581600871932 /* Theme.swift */; };
 		5D63A8D1221F610600871932 /* LVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D0221F610600871932 /* LVViewController.swift */; };
 		5D63A8D3221F62CA00871932 /* LVTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D2221F62CA00871932 /* LVTabsController.swift */; };
-		5D63A8D5221F63C800871932 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D4221F63C800871932 /* HomeViewController.swift */; };
+		5D63A8D5221F63C800871932 /* GoalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D4221F63C800871932 /* GoalListViewController.swift */; };
 		5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D6221F656100871932 /* LVFlatList.swift */; };
 		5D898216221DCDF400D4BE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D898215221DCDF400D4BE1C /* AppDelegate.swift */; };
 		5D89821D221DCDF400D4BE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D89821C221DCDF400D4BE1C /* Assets.xcassets */; };
@@ -48,13 +52,17 @@
 		2C19F279F09D4B3C8AB4536E /* Pods_LaVie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34BA88A6E2906DB4AF280F69 /* Pods-LaVieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieUITests.debug.xcconfig"; path = "Target Support Files/Pods-LaVieUITests/Pods-LaVieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4073E1B04FF03196EDA1F659 /* Pods-LaVieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.debug.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5D10CEF6222361AD00205B27 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
+		5D10CEF6222361AD00205B27 /* GoalShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalShowViewController.swift; sourceTree = "<group>"; };
 		5D3F4AE5222324A900B13FF8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		5D3F4AE8222324DF00B13FF8 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		5D4B5FA82226FAF100BA173D /* GoalCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCreateViewController.swift; sourceTree = "<group>"; };
+		5D4B5FAA2226FCB900BA173D /* LVModalViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVModalViewManager.swift; sourceTree = "<group>"; };
+		5D4B5FAC2227055900BA173D /* LVViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVViewManager.swift; sourceTree = "<group>"; };
+		5D4B5FAE2227376E00BA173D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D63A8CC221F581600871932 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		5D63A8D0221F610600871932 /* LVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVViewController.swift; sourceTree = "<group>"; };
 		5D63A8D2221F62CA00871932 /* LVTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabsController.swift; sourceTree = "<group>"; };
-		5D63A8D4221F63C800871932 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5D63A8D4221F63C800871932 /* GoalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListViewController.swift; sourceTree = "<group>"; };
 		5D63A8D6221F656100871932 /* LVFlatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVFlatList.swift; sourceTree = "<group>"; };
 		5D898212221DCDF400D4BE1C /* LaVie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaVie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D898215221DCDF400D4BE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,27 +137,28 @@
 		5D10CEF42223618900205B27 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
-				5D10CEF52223619E00205B27 /* Goal */,
-				5D3F4AE42223245000B13FF8 /* Home */,
+				5D4B5FA72226FA9F00BA173D /* Create */,
+				5D10CEF52223619E00205B27 /* Show */,
+				5D3F4AE42223245000B13FF8 /* List */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
 		};
-		5D10CEF52223619E00205B27 /* Goal */ = {
+		5D10CEF52223619E00205B27 /* Show */ = {
 			isa = PBXGroup;
 			children = (
-				5D10CEF6222361AD00205B27 /* GoalViewController.swift */,
+				5D10CEF6222361AD00205B27 /* GoalShowViewController.swift */,
 			);
-			path = Goal;
+			path = Show;
 			sourceTree = "<group>";
 		};
-		5D3F4AE42223245000B13FF8 /* Home */ = {
+		5D3F4AE42223245000B13FF8 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				5D63A8D4221F63C800871932 /* HomeViewController.swift */,
+				5D63A8D4221F63C800871932 /* GoalListViewController.swift */,
 				5D3F4AE5222324A900B13FF8 /* GoalCell.swift */,
 			);
-			path = Home;
+			path = List;
 			sourceTree = "<group>";
 		};
 		5D3F4AE7222324CE00B13FF8 /* Models */ = {
@@ -158,6 +167,15 @@
 				5D3F4AE8222324DF00B13FF8 /* Goal.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5D4B5FA72226FA9F00BA173D /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				5D4B5FA82226FAF100BA173D /* GoalCreateViewController.swift */,
+			);
+			name = Create;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		5D898209221DCDF400D4BE1C = {
@@ -192,6 +210,7 @@
 				5D89821C221DCDF400D4BE1C /* Assets.xcassets */,
 				5D89821E221DCDF400D4BE1C /* LaunchScreen.storyboard */,
 				5D898221221DCDF400D4BE1C /* Info.plist */,
+				5D4B5FAE2227376E00BA173D /* GoogleService-Info.plist */,
 			);
 			path = LaVie;
 			sourceTree = "<group>";
@@ -230,6 +249,8 @@
 				5D63A8D0221F610600871932 /* LVViewController.swift */,
 				5D63A8D2221F62CA00871932 /* LVTabsController.swift */,
 				5D63A8D6221F656100871932 /* LVFlatList.swift */,
+				5D4B5FAA2226FCB900BA173D /* LVModalViewManager.swift */,
+				5D4B5FAC2227055900BA173D /* LVViewManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -344,6 +365,7 @@
 			files = (
 				5D898220221DCDF400D4BE1C /* LaunchScreen.storyboard in Resources */,
 				5D89821D221DCDF400D4BE1C /* Assets.xcassets in Resources */,
+				5D4B5FAF2227376E00BA173D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,21 +461,37 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LaVie/Pods-LaVie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
 				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -468,13 +506,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D63A8D1221F610600871932 /* LVViewController.swift in Sources */,
-				5D10CEF7222361AD00205B27 /* GoalViewController.swift in Sources */,
+				5D4B5FA92226FAF100BA173D /* GoalCreateViewController.swift in Sources */,
+				5D10CEF7222361AD00205B27 /* GoalShowViewController.swift in Sources */,
 				5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */,
+				5D4B5FAB2226FCB900BA173D /* LVModalViewManager.swift in Sources */,
 				5D63A8CD221F581600871932 /* Theme.swift in Sources */,
 				5D63A8D3221F62CA00871932 /* LVTabsController.swift in Sources */,
 				5D3F4AE6222324A900B13FF8 /* GoalCell.swift in Sources */,
 				5DF47ED4221F56ED008F2D88 /* LVTabController.swift in Sources */,
-				5D63A8D5221F63C800871932 /* HomeViewController.swift in Sources */,
+				5D63A8D5221F63C800871932 /* GoalListViewController.swift in Sources */,
+				5D4B5FAD2227055900BA173D /* LVViewManager.swift in Sources */,
 				5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */,
 				5D898216221DCDF400D4BE1C /* AppDelegate.swift in Sources */,
 			);

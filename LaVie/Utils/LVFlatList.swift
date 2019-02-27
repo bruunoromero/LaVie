@@ -11,12 +11,37 @@ import UIKit
 
 
 class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
-    typealias Event = (T) -> Void
+    typealias Refresher = (LVFlatList) -> Void
     
-    var data: [T]?
-    var onSelect: Event?
-    var identifier: String
-    var builder: (T, UITableViewCell) -> UITableViewCell
+    private var data: [T]?
+    private var identifier: String
+    private var onRefresh: Refresher?
+    private var customRefreshControl: UIRefreshControl!
+    private var builder: (T, UITableViewCell) -> UITableViewCell
+    
+    init(data: [T], builder: @escaping (T, UITableViewCell) -> UITableViewCell) {
+        self.data = data
+        self.builder = builder
+        self.identifier = "LVFlatListCell"
+        self.customRefreshControl = UIRefreshControl()
+        
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: .plain)
+        
+        register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+
+        delegate = self
+        dataSource = self
+        separatorStyle = .none
+        rowHeight = UITableView.automaticDimension
+    }
+    
+    convenience init(builder: @escaping (T, UITableViewCell) -> UITableViewCell) {
+        self.init(data: [], builder: builder)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func element(for indexPath: IndexPath) -> T {
         return data![indexPath.row]
@@ -30,35 +55,6 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
         let el = element(for: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath as IndexPath)
         return builder(el, cell)
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let el = element(for: indexPath)
-        print("hey")
-        if let onSelect = onSelect {
-            onSelect(el)
-        }
-    }
-    
-    init(data: [T], builder: @escaping (T, UITableViewCell) -> UITableViewCell) {
-        self.data = data
-        self.builder = builder
-        self.identifier = "LVFlatListCell"
-        
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: .plain)
-        
-        self.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
-        self.delegate = self
-        self.dataSource = self
-        self.rowHeight = UITableView.automaticDimension
-    }
-    
-    convenience init(builder: @escaping (T, UITableViewCell) -> UITableViewCell) {
-        self.init(data: [], builder: builder)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     func update(data: [T]) {
@@ -88,8 +84,26 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
         return self
     }
     
-    func with(selection: @escaping Event) -> LVFlatList {
-        self.onSelect = selection
-        return self
+    func with(refresh: @escaping Refresher) -> LVFlatList {
+        self.onRefresh = refresh
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(performRefresh), for: .valueChanged)
+        
+        if #available(iOS 10.0, *) {
+            self.refreshControl = refreshControl
+        } else {
+            self.backgroundView = refreshControl
+        }
+        
+       return self
+    }
+    
+    @objc private func performRefresh() -> Void {
+        if let refresher = onRefresh {
+            refreshControl?.endRefreshing()
+            refresher(self)
+        } else {
+            refreshControl?.endRefreshing()
+        }
     }
 }

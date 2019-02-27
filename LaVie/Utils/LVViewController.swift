@@ -8,20 +8,19 @@
 
 import UIKit
 
-class LVViewController: UIViewController {
+
+class LVViewController: UIViewController, LVViewManager {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        title = ""
     }
-    
+
     init(title: String) {
         super.init(nibName: nil, bundle: nil)
-        self.title = title
+        initialize(title: title)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.edgesForExtendedLayout = []
-        navigationController?.navigationBar.prefersLargeTitles = true
+        managerDidLoad()
     }
 }
