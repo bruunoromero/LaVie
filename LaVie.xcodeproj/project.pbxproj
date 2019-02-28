@@ -15,8 +15,8 @@
 		5D4B5FAB2226FCB900BA173D /* LVModalViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAA2226FCB900BA173D /* LVModalViewManager.swift */; };
 		5D4B5FAD2227055900BA173D /* LVViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAC2227055900BA173D /* LVViewManager.swift */; };
 		5D4B5FAF2227376E00BA173D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAE2227376E00BA173D /* GoogleService-Info.plist */; };
+		5D4B5FB322276EF000BA173D /* AspectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FB222276EF000BA173D /* AspectManager.swift */; };
 		5D63A8CD221F581600871932 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8CC221F581600871932 /* Theme.swift */; };
-		5D63A8D1221F610600871932 /* LVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D0221F610600871932 /* LVViewController.swift */; };
 		5D63A8D3221F62CA00871932 /* LVTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D2221F62CA00871932 /* LVTabsController.swift */; };
 		5D63A8D5221F63C800871932 /* GoalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D4221F63C800871932 /* GoalListViewController.swift */; };
 		5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D6221F656100871932 /* LVFlatList.swift */; };
@@ -59,8 +59,8 @@
 		5D4B5FAA2226FCB900BA173D /* LVModalViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVModalViewManager.swift; sourceTree = "<group>"; };
 		5D4B5FAC2227055900BA173D /* LVViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVViewManager.swift; sourceTree = "<group>"; };
 		5D4B5FAE2227376E00BA173D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5D4B5FB222276EF000BA173D /* AspectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectManager.swift; sourceTree = "<group>"; };
 		5D63A8CC221F581600871932 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		5D63A8D0221F610600871932 /* LVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVViewController.swift; sourceTree = "<group>"; };
 		5D63A8D2221F62CA00871932 /* LVTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabsController.swift; sourceTree = "<group>"; };
 		5D63A8D4221F63C800871932 /* GoalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListViewController.swift; sourceTree = "<group>"; };
 		5D63A8D6221F656100871932 /* LVFlatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVFlatList.swift; sourceTree = "<group>"; };
@@ -137,9 +137,9 @@
 		5D10CEF42223618900205B27 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
-				5D4B5FA72226FA9F00BA173D /* Create */,
-				5D10CEF52223619E00205B27 /* Show */,
-				5D3F4AE42223245000B13FF8 /* List */,
+				5D4B5FB122276ED800BA173D /* Utils */,
+				5D3F4AE7222324CE00B13FF8 /* Models */,
+				5DF47ED1221F56BF008F2D88 /* Screens */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -178,6 +178,14 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		5D4B5FB122276ED800BA173D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5D4B5FB222276EF000BA173D /* AspectManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		5D898209221DCDF400D4BE1C = {
 			isa = PBXGroup;
 			children = (
@@ -203,9 +211,8 @@
 		5D898214221DCDF400D4BE1C /* LaVie */ = {
 			isa = PBXGroup;
 			children = (
-				5D3F4AE7222324CE00B13FF8 /* Models */,
+				5D10CEF42223618900205B27 /* Goals */,
 				5DF47ED2221F56CC008F2D88 /* Utils */,
-				5DF47ED1221F56BF008F2D88 /* Screens */,
 				5D898215221DCDF400D4BE1C /* AppDelegate.swift */,
 				5D89821C221DCDF400D4BE1C /* Assets.xcassets */,
 				5D89821E221DCDF400D4BE1C /* LaunchScreen.storyboard */,
@@ -236,7 +243,9 @@
 		5DF47ED1221F56BF008F2D88 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				5D10CEF42223618900205B27 /* Goals */,
+				5D10CEF52223619E00205B27 /* Show */,
+				5D3F4AE42223245000B13FF8 /* List */,
+				5D4B5FA72226FA9F00BA173D /* Create */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -246,7 +255,6 @@
 			children = (
 				5DF47ED3221F56ED008F2D88 /* LVTabController.swift */,
 				5D63A8CC221F581600871932 /* Theme.swift */,
-				5D63A8D0221F610600871932 /* LVViewController.swift */,
 				5D63A8D2221F62CA00871932 /* LVTabsController.swift */,
 				5D63A8D6221F656100871932 /* LVFlatList.swift */,
 				5D4B5FAA2226FCB900BA173D /* LVModalViewManager.swift */,
@@ -505,7 +513,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D63A8D1221F610600871932 /* LVViewController.swift in Sources */,
 				5D4B5FA92226FAF100BA173D /* GoalCreateViewController.swift in Sources */,
 				5D10CEF7222361AD00205B27 /* GoalShowViewController.swift in Sources */,
 				5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */,
@@ -517,6 +524,7 @@
 				5D63A8D5221F63C800871932 /* GoalListViewController.swift in Sources */,
 				5D4B5FAD2227055900BA173D /* LVViewManager.swift in Sources */,
 				5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */,
+				5D4B5FB322276EF000BA173D /* AspectManager.swift in Sources */,
 				5D898216221DCDF400D4BE1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

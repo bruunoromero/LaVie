@@ -9,6 +9,17 @@
 import UIKit
 
 
+class LVViewControllerManager {
+    static func initialize(controller: UIViewController, title: String) {
+        controller.title = title
+    }
+    
+    static func managerDidLoad(controller: UIViewController) {
+        controller.view.backgroundColor = .white
+        controller.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+}
+
 protocol LVViewManager {
     func initialize(title: String)
     func managerDidLoad()
@@ -16,11 +27,10 @@ protocol LVViewManager {
 
 extension LVViewManager where Self:UIViewController {
     func initialize(title: String) {
-        self.title = title
+        LVViewControllerManager.initialize(controller: self, title: title)
     }
     
     func managerDidLoad() {
-        self.view.backgroundColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = true
+        LVViewControllerManager.managerDidLoad(controller: self)
     }
 }

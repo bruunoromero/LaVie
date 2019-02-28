@@ -8,9 +8,18 @@
 
 import UIKit
 
+
 extension UIViewController {
     @objc func animatedDismiss() {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+
+class LVModalViewControllerManager {
+    static func managerDidLoad(controller: UIViewController) {
+        controller.navigationController?.navigationBar.prefersLargeTitles = false
+        controller.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: controller, action: #selector(controller.animatedDismiss))
     }
 }
 
@@ -20,8 +29,7 @@ protocol LVModalViewManager: LVViewManager {
 
 extension LVModalViewManager where Self:UIViewController {
     func managerDidLoad() {
-        view.backgroundColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(animatedDismiss))
+        LVViewControllerManager.managerDidLoad(controller: self)
+        LVModalViewControllerManager.managerDidLoad(controller: self)
     }
 }

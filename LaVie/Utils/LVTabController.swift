@@ -9,22 +9,19 @@
 import UIKit
 import Material
 
-class LVTabController: LVViewController {
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        title = ""
-        prepareTabItem(icon: nil)
-    }
-    
-    init(title: String, icon: UIImage?) {
-        super.init(title: title)
-        self.title = title
-        prepareTabItem(icon: icon)
+class LVTabControllerManager {
+    static func initialize(controller: UIViewController, title: String, icon: UIImage?) {
+        controller.tabBarItem = UITabBarItem(title: title, image: icon, selectedImage: nil)
     }
 }
 
-fileprivate extension LVTabController {
-    func prepareTabItem(icon: UIImage?) {
-        tabBarItem = UITabBarItem(title: title, image: icon, selectedImage: nil)
+protocol LVTabManager: LVViewManager {
+    func initialize(title: String, icon: UIImage?)
+}
+
+extension LVTabManager where Self:UIViewController {
+    func initialize(title: String, icon: UIImage?) {
+        LVViewControllerManager.initialize(controller: self, title: title)
+        LVTabControllerManager.initialize(controller: self, title: title, icon: icon)
     }
 }

@@ -11,6 +11,7 @@ import SnapKit
 
 class GoalCell: UITableViewCell {
     var cardTitle: UILabel!
+    var cardIcon: UIImageView!
     var cardBackgroundView: UIView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -26,7 +27,16 @@ class GoalCell: UITableViewCell {
     
     func setupLayout() {
         setupCardBackground()
+        setupCardIcon()
         setupCardTitle()
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        if highlighted {
+            cardBackgroundView.backgroundColor = .lightGray
+        } else {
+            cardBackgroundView.backgroundColor = .white
+        }
     }
     
     func setupCardBackground() {
@@ -38,15 +48,20 @@ class GoalCell: UITableViewCell {
         }
         
         cardBackgroundView.layer.cornerRadius = 4
-        
     }
     
-    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
-        if highlighted {
-            cardBackgroundView.backgroundColor = .lightGray
-        } else {
-            cardBackgroundView.backgroundColor = .white
+    func setupCardIcon() {
+        cardIcon = UIImageView()
+        addSubview(cardIcon)
+
+        cardIcon.snp.makeConstraints { make in
+            make.top.equalTo(cardBackgroundView).inset(12)
+            make.bottom.equalTo(cardBackgroundView).inset(12)
+            make.leading.equalTo(cardBackgroundView).inset(12)
+            make.width.equalTo(32)
         }
+        
+        cardIcon.tintColor = .gray
     }
     
     func setupCardTitle() {
@@ -54,13 +69,17 @@ class GoalCell: UITableViewCell {
         addSubview(cardTitle)
         
         cardTitle.snp.makeConstraints { make in
-            make.edges.equalTo(cardBackgroundView).inset(16)
+            make.leading.equalTo(cardIcon).offset(8 + 32)
+            make.top.equalTo(cardBackgroundView).inset(16)
+            make.bottom.equalTo(cardBackgroundView).inset(16)
         }
         
     }
     
     func with(goal: Goal) -> GoalCell {
-        cardTitle?.text = goal.title
+        cardTitle.text = goal.title
+        cardIcon.image = AspectManager.icon(from: goal.aspect)
+        
         return self
     }
 }

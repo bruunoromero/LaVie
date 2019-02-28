@@ -10,11 +10,17 @@ import UIKit
 import Firebase
 import YogaKit
 
-class GoalListViewController: LVTabController {
+class GoalListViewController: UIViewController, LVTabManager {
     var tableView: LVFlatList<Goal>!
+    
+    convenience init(title: String, icon: UIImage?) {
+        self.init(nibName: nil, bundle: nil)
+        initialize(title: title, icon: icon)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        managerDidLoad()
         setupLayout()
         fetchData(tableView: tableView)
     }
@@ -41,6 +47,10 @@ class GoalListViewController: LVTabController {
         self.navigationController?.present(UINavigationController(rootViewController: GoalCreateViewController(title: "Hey")), animated: true)
     }
     
+    func pushShowViewController(goal: Goal) {
+        self.navigationController?.pushViewController(GoalShowViewController(goal: goal), animated: true)
+    }
+    
     func setupLayout() {
         setupNavigationBar()
         setupTableView()
@@ -50,8 +60,7 @@ class GoalListViewController: LVTabController {
         let cellBuilder = { (el: Goal, cell: UITableViewCell) -> UITableViewCell in
             let goalCell = cell as! GoalCell
             
-            return goalCell
-                    .with(goal: el)
+            return goalCell.with(goal: el)
         }
         
         tableView =
@@ -59,7 +68,8 @@ class GoalListViewController: LVTabController {
                 .with(cell: GoalCell.self)
                 .with(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
                 .with(refresh: fetchData)
-
+                .with(selection: pushShowViewController)
+        
         tableView.backgroundColor = UIColor(white: 0.9, alpha: 1)
         view.addSubview(tableView)
     }

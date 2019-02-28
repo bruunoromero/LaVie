@@ -15,19 +15,15 @@ class GoalCreateViewController: FormViewController, LVModalViewManager {
     var aspects: PushRow<String>!
     var motivations: MultivaluedSection!
     
-    init(title: String) {
-        super.init(nibName: nil, bundle: nil)
+    convenience init(title: String) {
+        self.init(nibName: nil, bundle: nil)
         initialize(title: title)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         managerDidLoad()
+        setupNavigationBar()
         setupLayout()
         
     }
@@ -83,7 +79,7 @@ class GoalCreateViewController: FormViewController, LVModalViewManager {
     func setupAspect() {
         aspects = PushRow<String>() { row in
             row.title = "Aspecto"
-            row.options = ["haha", "hehehe"]
+            row.options = ["Trabalho", "Saúde"]
         }
 
         form +++ Section("Aspecto") <<< aspects

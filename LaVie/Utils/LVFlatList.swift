@@ -11,9 +11,11 @@ import UIKit
 
 
 class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
+    typealias Event = (T) -> Void
     typealias Refresher = (LVFlatList) -> Void
     
     private var data: [T]?
+    private var onSelect: Event?
     private var identifier: String
     private var onRefresh: Refresher?
     private var customRefreshControl: UIRefreshControl!
@@ -57,6 +59,14 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
         return builder(el, cell)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let el = element(for: indexPath)
+        
+        if let onSelect = onSelect {
+            onSelect(el)
+        }
+    }
+    
     func update(data: [T]) {
         self.data = data
         DispatchQueue.main.async {
@@ -81,6 +91,11 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     func with(frame: CGRect) -> LVFlatList{
         self.frame = frame
+        return self
+    }
+    
+    func with(selection: @escaping Event) -> LVFlatList {
+        self.onSelect = selection
         return self
     }
     
