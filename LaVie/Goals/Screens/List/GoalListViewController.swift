@@ -12,17 +12,11 @@ import YogaKit
 
 class GoalListViewController: UIViewController, LVTabManager {
     var tableView: LVFlatList<Goal>!
-    
-    convenience init(title: String, icon: UIImage?) {
-        self.init(nibName: nil, bundle: nil)
-        initialize(title: title, icon: icon)
-    }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         managerDidLoad()
         setupLayout()
-        fetchData(tableView: tableView)
     }
     
     func fetchData(tableView: LVFlatList<Goal>) {
@@ -37,6 +31,10 @@ class GoalListViewController: UIViewController, LVTabManager {
                 tableView.update(data: data)
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        fetchData(tableView: tableView)
     }
     
     func setupNavigationBar() {

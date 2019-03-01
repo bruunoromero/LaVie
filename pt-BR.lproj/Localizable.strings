@@ -1,0 +1,21 @@
+/* 
+  LocalizedStrings.strings
+  LaVie
+
+  Created by Bruno Barreira on 28/02/19.
+  Copyright © 2019 Bruno Barreira. All rights reserved.
+*/
+
+// GOAL - HOME
+"home" = "Início";
+
+// GOAL - CREATE
+"aspect" = "Aspecto";
+"title" = "Título";
+"what_is_your_goal" = "Qual a sua meta?";
+"motivations" = "Motivações";
+"motivation" = "Motivação";
+"new_motivation" = "Nova motivação";
+"due_date" = "Termina em";
+"work" = "Trabalho";
+"health" = "Saúde";

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0880F21A3A0629CD79F94215 /* Pods_LaVieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C00DF236D7FAF0DC2619D8 /* Pods_LaVieUITests.framework */; };
+		5D032F892228BA50000FCEEC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D032F8B2228BA50000FCEEC /* Localizable.strings */; };
+		5D032F8E2228BF6D000FCEEC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D032F8D2228BF6D000FCEEC /* Utils.swift */; };
+		5D032F902228CCB5000FCEEC /* Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D032F8F2228CCB5000FCEEC /* Aspect.swift */; };
+		5D032F922228CE51000FCEEC /* Documantable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D032F912228CE51000FCEEC /* Documantable.swift */; };
 		5D10CEF7222361AD00205B27 /* GoalShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D10CEF6222361AD00205B27 /* GoalShowViewController.swift */; };
 		5D3F4AE6222324A900B13FF8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F4AE5222324A900B13FF8 /* GoalCell.swift */; };
 		5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F4AE8222324DF00B13FF8 /* Goal.swift */; };
@@ -52,6 +56,12 @@
 		2C19F279F09D4B3C8AB4536E /* Pods_LaVie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34BA88A6E2906DB4AF280F69 /* Pods-LaVieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieUITests.debug.xcconfig"; path = "Target Support Files/Pods-LaVieUITests/Pods-LaVieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4073E1B04FF03196EDA1F659 /* Pods-LaVieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.debug.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D032F862228B9D3000FCEEC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		5D032F8A2228BA50000FCEEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5D032F8C2228BA52000FCEEC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5D032F8D2228BF6D000FCEEC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		5D032F8F2228CCB5000FCEEC /* Aspect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aspect.swift; sourceTree = "<group>"; };
+		5D032F912228CE51000FCEEC /* Documantable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documantable.swift; sourceTree = "<group>"; };
 		5D10CEF6222361AD00205B27 /* GoalShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalShowViewController.swift; sourceTree = "<group>"; };
 		5D3F4AE5222324A900B13FF8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		5D3F4AE8222324DF00B13FF8 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
@@ -165,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				5D3F4AE8222324DF00B13FF8 /* Goal.swift */,
+				5D032F8F2228CCB5000FCEEC /* Aspect.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +200,7 @@
 		5D898209221DCDF400D4BE1C = {
 			isa = PBXGroup;
 			children = (
+				5D032F8B2228BA50000FCEEC /* Localizable.strings */,
 				5D898214221DCDF400D4BE1C /* LaVie */,
 				5D898229221DCDF400D4BE1C /* LaVieTests */,
 				5D898234221DCDF400D4BE1C /* LaVieUITests */,
@@ -259,6 +271,8 @@
 				5D63A8D6221F656100871932 /* LVFlatList.swift */,
 				5D4B5FAA2226FCB900BA173D /* LVModalViewManager.swift */,
 				5D4B5FAC2227055900BA173D /* LVViewManager.swift */,
+				5D032F8D2228BF6D000FCEEC /* Utils.swift */,
+				5D032F912228CE51000FCEEC /* Documantable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -353,6 +367,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 5D898209221DCDF400D4BE1C;
 			productRefGroup = 5D898213221DCDF400D4BE1C /* Products */;
@@ -372,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D898220221DCDF400D4BE1C /* LaunchScreen.storyboard in Resources */,
+				5D032F892228BA50000FCEEC /* Localizable.strings in Resources */,
 				5D89821D221DCDF400D4BE1C /* Assets.xcassets in Resources */,
 				5D4B5FAF2227376E00BA173D /* GoogleService-Info.plist in Resources */,
 			);
@@ -516,6 +532,7 @@
 				5D4B5FA92226FAF100BA173D /* GoalCreateViewController.swift in Sources */,
 				5D10CEF7222361AD00205B27 /* GoalShowViewController.swift in Sources */,
 				5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */,
+				5D032F8E2228BF6D000FCEEC /* Utils.swift in Sources */,
 				5D4B5FAB2226FCB900BA173D /* LVModalViewManager.swift in Sources */,
 				5D63A8CD221F581600871932 /* Theme.swift in Sources */,
 				5D63A8D3221F62CA00871932 /* LVTabsController.swift in Sources */,
@@ -524,6 +541,8 @@
 				5D63A8D5221F63C800871932 /* GoalListViewController.swift in Sources */,
 				5D4B5FAD2227055900BA173D /* LVViewManager.swift in Sources */,
 				5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */,
+				5D032F922228CE51000FCEEC /* Documantable.swift in Sources */,
+				5D032F902228CCB5000FCEEC /* Aspect.swift in Sources */,
 				5D4B5FB322276EF000BA173D /* AspectManager.swift in Sources */,
 				5D898216221DCDF400D4BE1C /* AppDelegate.swift in Sources */,
 			);
@@ -561,10 +580,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5D032F8B2228BA50000FCEEC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D032F8A2228BA50000FCEEC /* en */,
+				5D032F8C2228BA52000FCEEC /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		5D89821E221DCDF400D4BE1C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5D89821F221DCDF400D4BE1C /* Base */,
+				5D032F862228B9D3000FCEEC /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -576,6 +605,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -637,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

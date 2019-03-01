@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         let tabs = [
-            UINavigationController(rootViewController: GoalListViewController(title: "Home", icon: Icon.home)),
+            UINavigationController(rootViewController: GoalListViewController(title: i18n("home"), icon: Icon.home)),
             UINavigationController(rootViewController: GoalListViewController(title: "Other Home", icon: Icon.addCircle))
         ]
         

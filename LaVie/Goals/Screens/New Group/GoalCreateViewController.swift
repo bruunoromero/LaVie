@@ -8,24 +8,19 @@
 
 import UIKit
 import Eureka
+import Firebase
 
 class GoalCreateViewController: FormViewController, LVModalViewManager {
-    var dueDate: DateRow!
     var titleRow: TextRow!
-    var aspects: PushRow<String>!
-    var motivations: MultivaluedSection!
-    
-    convenience init(title: String) {
-        self.init(nibName: nil, bundle: nil)
-        initialize(title: title)
-    }
+    var dueDateRow: DateRow!
+    var aspectsRow: PushRow<Aspect>!
+    var motivationsSection: MultivaluedSection!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         managerDidLoad()
         setupNavigationBar()
         setupLayout()
-        
     }
     
     func setupNavigationBar() {
@@ -33,7 +28,30 @@ class GoalCreateViewController: FormViewController, LVModalViewManager {
     }
     
     @objc func createGoal() {
+        print("heyy")
+        let motivations = motivationsSection.values().compactMap { $0 }
         
+        guard let title = titleRow.value else {
+            return
+        }
+        
+        guard let aspect = aspectsRow.value else {
+            return
+        }
+        
+        guard let dueDate = dueDateRow.value else {
+            return
+        }
+        
+        let goal = Goal(title: title, aspect: aspect.name)
+        
+        Firestore.firestore().collection("goals").addDocument(data: goal.toDocument(), completion: { [unowned self] error in
+            if let err = error {
+                print("err")
+            } else {
+                self.animatedDismiss()
+            }
+        })
     }
     
     func setupLayout() {
@@ -49,56 +67,56 @@ class GoalCreateViewController: FormViewController, LVModalViewManager {
     
     func setupTitleRow() {
         titleRow = TextRow() { row in
-            row.placeholder = "Qual a sua meta?"
+            row.placeholder = i18n("what_is_your_goal")
             row.add(rule: RuleRequired())
             row.validationOptions = .validatesOnChange
         }
         
-        form +++ Section("Título") <<< titleRow
+        form +++ Section(i18n("title")) <<< titleRow
     }
     
     func setupMotivations() {
-        motivations = MultivaluedSection(multivaluedOptions: [.Insert, .Delete], header:"Motivações") { section in
+        motivationsSection = MultivaluedSection(multivaluedOptions: [.Insert, .Delete], header: i18n("motivations")) { section in
             section.addButtonProvider = { provider in
                 return ButtonRow() { row in
-                    row.title = "Nova motivação"
+                    row.title = i18n("new_motivation")
                 }
             }
             
             section.multivaluedRowToInsertAt = { provider in
                 return TextRow() { row in
-                    row.placeholder = "Motivação"
+                    row.placeholder = i18n("motivation")
                     row.add(rule: RuleRequired())
                 }
             }
         }
         
-        form +++ motivations
+        form +++ motivationsSection
     }
     
     func setupAspect() {
-        aspects = PushRow<String>() { row in
-            row.title = "Aspecto"
-            row.options = ["Trabalho", "Saúde"]
+        let title = i18n("aspect")
+        aspectsRow = PushRow<Aspect>() { row in
+            row.title = title
+            row.options = [Aspect(name: "work"), Aspect(name: "health")]
         }
 
-        form +++ Section("Aspecto") <<< aspects
+        form +++ Section(title) <<< aspectsRow
     }
     
     func setupDueDate() {
+        let title = i18n("due_date")
         
-        
-        
-        dueDate = DateRow() { row in
+        dueDateRow = DateRow() { row in
             let dateFormatter = DateFormatter()
             dateFormatter.locale = .current
             dateFormatter.dateStyle = .short
             
             row.dateFormatter = dateFormatter
-            row.title = "Termina em"
+            row.title = title
             row.minimumDate = Date()
         }
         
-        form +++ Section("Termina em") <<< dueDate
+        form +++ Section(title) <<< dueDateRow
     }
 }

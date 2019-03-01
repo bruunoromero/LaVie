@@ -55,9 +55,7 @@ class GoalCell: UITableViewCell {
         addSubview(cardIcon)
 
         cardIcon.snp.makeConstraints { make in
-            make.top.equalTo(cardBackgroundView).inset(12)
-            make.bottom.equalTo(cardBackgroundView).inset(12)
-            make.leading.equalTo(cardBackgroundView).inset(12)
+            make.top.bottom.leading.equalTo(cardBackgroundView).inset(12)
             make.width.equalTo(32)
         }
         

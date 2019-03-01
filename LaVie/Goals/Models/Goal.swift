@@ -8,7 +8,11 @@
 
 import Firebase
 
-struct Goal {
+struct Goal: Documentable {
+    func toDocument() -> [String : Any] {
+        return ["title": self.title, "aspect": self.aspect]
+    }
+    
     let id: String?
     let title: String
     let aspect: String

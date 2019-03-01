@@ -21,12 +21,13 @@ class LVViewControllerManager {
 }
 
 protocol LVViewManager {
-    func initialize(title: String)
+    init(title: String)
     func managerDidLoad()
 }
 
 extension LVViewManager where Self:UIViewController {
-    func initialize(title: String) {
+    init(title: String) {
+        self.init(nibName: nil, bundle: nil)
         LVViewControllerManager.initialize(controller: self, title: title)
     }
     

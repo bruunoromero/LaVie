@@ -10,8 +10,7 @@ import UIKit
 
 class GoalShowViewController: UIViewController, LVViewManager {
     convenience init(goal: Goal) {
-        self.init(nibName: nil, bundle: nil)
-        initialize(title: goal.title)
+        self.init(title: goal.title)
     }
     
     override func viewDidLoad() {
