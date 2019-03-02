@@ -13,9 +13,9 @@ struct Goal: Documentable {
     let title: String
     let aspect: String
     let dueDate: Date
-    let motivations: [String]?
+    let motivations: [String]
     
-    init(id: String? = nil, title: String, aspect: String, dueDate: Date, motivations: [String]? = nil) {
+    init(id: String? = nil, title: String, aspect: String, dueDate: Date, motivations: [String]) {
         self.id = id
         self.title = title
         self.aspect = aspect
@@ -28,10 +28,15 @@ struct Goal: Documentable {
         title = document["title"] as! String
         aspect = document["aspect"] as! String
         dueDate = (document["dueDate"] as! Timestamp).dateValue()
-        motivations = document["motivations"] as? [String]
+        motivations = document["motivations"] as! [String]
     }
     
     func toDocument() -> [String : Any] {
-        return ["title": self.title, "aspect": self.aspect]
+        return [
+            "title": self.title,
+            "aspect": self.aspect,
+            "dueDate": Timestamp(date: self.dueDate),
+            "motivations": self.motivations
+        ]
     }
 }
