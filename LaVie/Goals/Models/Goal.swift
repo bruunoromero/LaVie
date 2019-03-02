@@ -9,23 +9,29 @@
 import Firebase
 
 struct Goal: Documentable {
-    func toDocument() -> [String : Any] {
-        return ["title": self.title, "aspect": self.aspect]
-    }
-    
     let id: String?
     let title: String
     let aspect: String
+    let dueDate: Date
+    let motivations: [String]?
     
-    init(id: String? = nil, title: String, aspect: String) {
+    init(id: String? = nil, title: String, aspect: String, dueDate: Date, motivations: [String]? = nil) {
         self.id = id
         self.title = title
         self.aspect = aspect
+        self.dueDate = dueDate
+        self.motivations = motivations
     }
     
     init(from document: QueryDocumentSnapshot) {
         id = document.documentID
         title = document["title"] as! String
         aspect = document["aspect"] as! String
+        dueDate = (document["dueDate"] as! Timestamp).dateValue()
+        motivations = document["motivations"] as? [String]
+    }
+    
+    func toDocument() -> [String : Any] {
+        return ["title": self.title, "aspect": self.aspect]
     }
 }

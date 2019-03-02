@@ -28,8 +28,8 @@ class GoalCreateViewController: FormViewController, LVModalViewManager {
     }
     
     @objc func createGoal() {
-        print("heyy")
-        let motivations = motivationsSection.values().compactMap { $0 }
+        let motivations = motivationsSection.values().compactMap { $0 as? String }
+        print(motivations)
         
         guard let title = titleRow.value else {
             return
@@ -43,11 +43,11 @@ class GoalCreateViewController: FormViewController, LVModalViewManager {
             return
         }
         
-        let goal = Goal(title: title, aspect: aspect.name)
+        let goal = Goal(title: title, aspect: aspect.name, dueDate: dueDate, motivations: motivations)
         
         Firestore.firestore().collection("goals").addDocument(data: goal.toDocument(), completion: { [unowned self] error in
             if let err = error {
-                print("err")
+                print(err.localizedDescription)
             } else {
                 self.animatedDismiss()
             }
