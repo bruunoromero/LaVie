@@ -31,12 +31,16 @@ struct Goal: Documentable {
         motivations = document["motivations"] as! [String]
     }
     
+    static func getCollection(from: String) -> CollectionReference {
+        return Firestore.firestore().collection("goals")
+    }
+    
     func toDocument() -> [String : Any] {
         return [
-            "title": self.title,
-            "aspect": self.aspect,
-            "dueDate": Timestamp(date: self.dueDate),
-            "motivations": self.motivations
+            "title": title,
+            "aspect": aspect,
+            "dueDate": Timestamp(date: dueDate),
+            "motivations": motivations
         ]
     }
 }

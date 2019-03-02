@@ -45,7 +45,7 @@ class GoalCreateViewController: FormViewController, LVModalViewManager {
         
         let goal = Goal(title: title, aspect: aspect.name, dueDate: dueDate, motivations: motivations)
         
-        Firestore.firestore().collection("goals").addDocument(data: goal.toDocument(), completion: { [unowned self] error in
+        Goal.collection.addDocument(data: goal.toDocument(), completion: { [unowned self] error in
             if let err = error {
                 print(err.localizedDescription)
             } else {

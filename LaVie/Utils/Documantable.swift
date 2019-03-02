@@ -11,4 +11,12 @@ import Firebase
 protocol Documentable {
     func toDocument() -> [String:Any]
     init(from: QueryDocumentSnapshot)
+    static var collection: CollectionReference { get }
+    static func getCollection(from: String) -> CollectionReference
+}
+
+extension Documentable  {
+    static var collection: CollectionReference {
+        return getCollection(from: "")
+    }
 }
