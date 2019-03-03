@@ -11,6 +11,7 @@ import UIKit
 class LVTabsController: UITabBarController {
     init(viewControllers: [UIViewController]) {
         super.init(nibName: nil, bundle: nil)
+        self.tabBar.isTranslucent = false
         self.viewControllers = viewControllers
     }
     

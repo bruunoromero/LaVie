@@ -11,7 +11,7 @@ import UIKit
 
 
 class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
-    typealias Event = (T) -> Void
+    typealias Event = (Int, T) -> Void
     typealias Refresher = (LVFlatList) -> Void
     
     private var data: [T]?
@@ -63,7 +63,7 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
         let el = element(for: indexPath)
         
         if let onSelect = onSelect {
-            onSelect(el)
+            onSelect(indexPath.row, el)
         }
     }
     

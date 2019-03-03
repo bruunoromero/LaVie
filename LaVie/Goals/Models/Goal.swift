@@ -13,14 +13,14 @@ struct Goal: Documentable {
     let title: String
     let aspect: String
     let dueDate: Date
-    let motivations: [String]
+    let createdAt: Date
     
-    init(id: String? = nil, title: String, aspect: String, dueDate: Date, motivations: [String]) {
+    init(id: String? = nil, title: String, aspect: String, dueDate: Date) {
         self.id = id
         self.title = title
         self.aspect = aspect
         self.dueDate = dueDate
-        self.motivations = motivations
+        self.createdAt = Date()
     }
     
     init(from document: QueryDocumentSnapshot) {
@@ -28,7 +28,7 @@ struct Goal: Documentable {
         title = document["title"] as! String
         aspect = document["aspect"] as! String
         dueDate = (document["dueDate"] as! Timestamp).dateValue()
-        motivations = document["motivations"] as! [String]
+        createdAt = (document["createdAt"] as! Timestamp).dateValue()
     }
     
     static func getCollection(from: String) -> CollectionReference {
@@ -40,7 +40,7 @@ struct Goal: Documentable {
             "title": title,
             "aspect": aspect,
             "dueDate": Timestamp(date: dueDate),
-            "motivations": motivations
+            "createdAt": Timestamp(date: createdAt)
         ]
     }
 }

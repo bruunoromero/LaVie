@@ -29,6 +29,7 @@
 		5D898220221DCDF400D4BE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D89821E221DCDF400D4BE1C /* LaunchScreen.storyboard */; };
 		5D89822B221DCDF400D4BE1C /* LaVieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D89822A221DCDF400D4BE1C /* LaVieTests.swift */; };
 		5D898236221DCDF400D4BE1C /* LaVieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D898235221DCDF400D4BE1C /* LaVieUITests.swift */; };
+		5DDC4E84222B347E0012A3B6 /* GoalDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E83222B347E0012A3B6 /* GoalDetails.swift */; };
 		5DF47ED4221F56ED008F2D88 /* LVTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF47ED3221F56ED008F2D88 /* LVTabController.swift */; };
 		862BDD84713DC841B67CD60E /* Pods_LaVieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90ED558A089D3922BAEEF4B /* Pods_LaVieTests.framework */; };
 		AAF502127DF91870EFFAA634 /* Pods_LaVie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C19F279F09D4B3C8AB4536E /* Pods_LaVie.framework */; };
@@ -85,6 +86,7 @@
 		5D898231221DCDF400D4BE1C /* LaVieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaVieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D898235221DCDF400D4BE1C /* LaVieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaVieUITests.swift; sourceTree = "<group>"; };
 		5D898237221DCDF400D4BE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DDC4E83222B347E0012A3B6 /* GoalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetails.swift; sourceTree = "<group>"; };
 		5DF47ED3221F56ED008F2D88 /* LVTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabController.swift; sourceTree = "<group>"; };
 		A29E00AAFD6C3EB27072C51F /* Pods-LaVieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.release.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4C00DF236D7FAF0DC2619D8 /* Pods_LaVieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +178,7 @@
 			children = (
 				5D3F4AE8222324DF00B13FF8 /* Goal.swift */,
 				5D032F8F2228CCB5000FCEEC /* Aspect.swift */,
+				5DDC4E83222B347E0012A3B6 /* GoalDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 			files = (
 				5D4B5FA92226FAF100BA173D /* GoalCreateViewController.swift in Sources */,
 				5D10CEF7222361AD00205B27 /* GoalShowViewController.swift in Sources */,
+				5DDC4E84222B347E0012A3B6 /* GoalDetails.swift in Sources */,
 				5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */,
 				5D032F8E2228BF6D000FCEEC /* Utils.swift in Sources */,
 				5D4B5FAB2226FCB900BA173D /* LVModalViewManager.swift in Sources */,

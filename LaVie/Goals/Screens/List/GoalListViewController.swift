@@ -42,10 +42,10 @@ class GoalListViewController: UIViewController, LVTabManager {
     }
     
     @objc func pushAddViewController() {
-        self.navigationController?.present(UINavigationController(rootViewController: GoalCreateViewController(title: "Hey")), animated: true)
+        self.navigationController?.present(UINavigationController(rootViewController: GoalCreateViewController(title: i18n("new_goal"))), animated: true)
     }
     
-    func pushShowViewController(goal: Goal) {
+    func pushShowViewController(index: Int, goal: Goal) {
         self.navigationController?.pushViewController(GoalShowViewController(goal: goal), animated: true)
     }
     

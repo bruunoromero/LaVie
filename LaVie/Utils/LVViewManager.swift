@@ -12,6 +12,7 @@ import UIKit
 class LVViewControllerManager {
     static func initialize(controller: UIViewController, title: String) {
         controller.title = title
+        controller.hidesBottomBarWhenPushed = true
     }
     
     static func managerDidLoad(controller: UIViewController) {
