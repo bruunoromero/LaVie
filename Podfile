@@ -6,6 +6,7 @@ target 'LaVie' do
   use_frameworks!
 
   # Pods for LaVie
+  pod 'Material'
   pod 'PinLayout'
   pod 'FlexLayout'
   pod 'Firebase/Core'
