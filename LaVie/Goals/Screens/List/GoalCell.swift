@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SnapKit
-import PinLayout
 import FlexLayout
 
 class GoalCell: LVCell {

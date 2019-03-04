@@ -7,9 +7,6 @@
 //
 
 import UIKit
-
-
-import UIKit
 import Eureka
 import Firebase
 
@@ -38,7 +35,7 @@ class GoalShowViewController: FormViewController, LVPushable {
     }
     
     @objc func editGoal() {
-        
+
     }
     
     func setupForm() {
@@ -55,7 +52,7 @@ class GoalShowViewController: FormViewController, LVPushable {
             form.last! <<< ListCheckRow<String> { row in
                 row.title = objective.title
                 row.selectableValue = objective.title
-                row.value = nil
+                row.value = objective.isDone ? objective.title : nil
             }
         }
     }
