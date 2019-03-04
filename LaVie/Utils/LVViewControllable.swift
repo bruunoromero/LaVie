@@ -9,10 +9,9 @@
 import UIKit
 
 
-class LVViewControllerManager {
+class LVViewControllableDelegate {
     static func initialize(controller: UIViewController, title: String) {
         controller.title = title
-        controller.hidesBottomBarWhenPushed = true
     }
     
     static func managerDidLoad(controller: UIViewController) {
@@ -21,18 +20,18 @@ class LVViewControllerManager {
     }
 }
 
-protocol LVViewManager {
+protocol LVViewControllable {
     init(title: String)
     func managerDidLoad()
 }
 
-extension LVViewManager where Self:UIViewController {
+extension LVViewControllable where Self:UIViewController {
     init(title: String) {
         self.init(nibName: nil, bundle: nil)
-        LVViewControllerManager.initialize(controller: self, title: title)
+        LVViewControllableDelegate.initialize(controller: self, title: title)
     }
     
     func managerDidLoad() {
-        LVViewControllerManager.managerDidLoad(controller: self)
+        LVViewControllableDelegate.managerDidLoad(controller: self)
     }
 }

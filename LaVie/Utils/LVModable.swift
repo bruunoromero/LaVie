@@ -16,20 +16,20 @@ extension UIViewController {
 }
 
 
-class LVModalViewControllerManager {
+class LVModableDelegate {
     static func managerDidLoad(controller: UIViewController) {
         controller.navigationController?.navigationBar.prefersLargeTitles = false
         controller.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: controller, action: #selector(controller.animatedDismiss))
     }
 }
 
-protocol LVModalViewManager: LVViewManager {
+protocol LVModable: LVViewControllable {
     func managerDidLoad()
 }
 
-extension LVModalViewManager where Self:UIViewController {
+extension LVModable where Self:UIViewController {
     func managerDidLoad() {
-        LVViewControllerManager.managerDidLoad(controller: self)
-        LVModalViewControllerManager.managerDidLoad(controller: self)
+        LVViewControllableDelegate.managerDidLoad(controller: self)
+        LVModableDelegate.managerDidLoad(controller: self)
     }
 }

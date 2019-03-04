@@ -6,12 +6,11 @@ target 'LaVie' do
   use_frameworks!
 
   # Pods for LaVie
-  pod 'YogaKit'
-  pod 'Material'
+  pod 'PinLayout'
+  pod 'FlexLayout'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Eureka', '~> 4.3.1'
-  pod 'SnapKit', '~> 4.0.0'
 
   target 'LaVieTests' do
     inherit! :search_paths

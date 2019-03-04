@@ -10,18 +10,23 @@ import Firebase
 
 struct GoalDetails: Documentable {
     let id: String?
-    let objectives: [String]
+    let objectives: [Objective]
     let motivations: [String]
     
-    init(id: String? = nil, objectives: [String], motivations: [String]) {
+    init(id: String? = nil, objectives: [Objective], motivations: [String]) {
         self.id = id
         self.objectives = objectives
         self.motivations = motivations
     }
     
     init(from document: QueryDocumentSnapshot) {
+        let objs: [Objective] = (document["objectives"] as! NSArray).map {
+            let objective = $0 as! NSDictionary
+            return Objective(from: objective)
+        }
+        
         id = document.documentID
-        objectives = document["objectives"] as! [String]
+        objectives = objs
         motivations = document["motivations"] as! [String]
     }
     
@@ -31,8 +36,8 @@ struct GoalDetails: Documentable {
     
     func toDocument() -> [String : Any] {
         return [
-            "objectives": self.objectives,
-            "motivations": self.motivations
+            "motivations": self.motivations,
+            "objectives": self.objectives.map { $0.toDocument() },
         ]
     }
 }

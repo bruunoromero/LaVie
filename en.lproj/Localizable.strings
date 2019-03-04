@@ -8,6 +8,7 @@
 
 // GOAL - HOME
 "home" = "Home";
+"completed" = "completed";
 
 // GOAL - CREATE
 "new_goal" = "New goal";

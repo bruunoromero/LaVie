@@ -20,3 +20,8 @@ extension Documentable  {
         return getCollection(from: "")
     }
 }
+
+protocol Mappable {
+    init(from dictionary: NSDictionary)
+    func toDocument() -> [String:Any]
+}

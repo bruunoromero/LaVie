@@ -8,6 +8,7 @@
 
 // GOAL - HOME
 "home" = "Início";
+"completed" = "concluído";
 
 // GOAL - CREATE
 "new_goal" = "Nova meta";

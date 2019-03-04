@@ -10,7 +10,7 @@ import UIKit
 import Eureka
 import Firebase
 
-class GoalCreateViewController: FormViewController, LVModalViewManager {
+class GoalCreateViewController: FormViewController, LVModable {
     var titleRow: TextRow!
     var dueDateRow: DateRow!
     var aspectsRow: PushRow<Aspect>!
@@ -29,7 +29,7 @@ class GoalCreateViewController: FormViewController, LVModalViewManager {
     }
     
     @objc func createGoal() {
-        let objectives = objectivesSection.values().compactMap { $0 as? String}
+        let objectives = objectivesSection.values().compactMap { $0 as? String }.map { Objective(title: $0) }
         let motivations = motivationsSection.values().compactMap { $0 as? String }
         
         guard let title = titleRow.value else {
@@ -44,21 +44,13 @@ class GoalCreateViewController: FormViewController, LVModalViewManager {
             return
         }
         
-        var goalRef: DocumentReference? = nil
-        let goal = Goal(title: title, aspect: aspect.name, dueDate: dueDate)
+        let goal = Goal(title: title, aspect: aspect.name, objectives: objectives, motivations: motivations, dueDate: dueDate)
         
-        goalRef = Goal.collection.addDocument(data: goal.toDocument(), completion: { [unowned self] error in
+        Goal.collection.addDocument(data: goal.toDocument(), completion: { [unowned self] error in
             if let err = error {
                 print(err.localizedDescription)
             } else {
-                let goalDetails = GoalDetails(objectives: objectives, motivations: motivations)
-                GoalDetails.getCollection(from: goalRef!.documentID).addDocument(data: goalDetails.toDocument(), completion: { [unowned self] error in
-                    if let err = error {
-                        print(err.localizedDescription)
-                    } else {
-                        self.animatedDismiss()
-                    }
-                })
+                self.animatedDismiss()
             }
         })
     }

@@ -16,8 +16,8 @@
 		5D3F4AE6222324A900B13FF8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F4AE5222324A900B13FF8 /* GoalCell.swift */; };
 		5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F4AE8222324DF00B13FF8 /* Goal.swift */; };
 		5D4B5FA92226FAF100BA173D /* GoalCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FA82226FAF100BA173D /* GoalCreateViewController.swift */; };
-		5D4B5FAB2226FCB900BA173D /* LVModalViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAA2226FCB900BA173D /* LVModalViewManager.swift */; };
-		5D4B5FAD2227055900BA173D /* LVViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAC2227055900BA173D /* LVViewManager.swift */; };
+		5D4B5FAB2226FCB900BA173D /* LVModable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAA2226FCB900BA173D /* LVModable.swift */; };
+		5D4B5FAD2227055900BA173D /* LVViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAC2227055900BA173D /* LVViewControllable.swift */; };
 		5D4B5FAF2227376E00BA173D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAE2227376E00BA173D /* GoogleService-Info.plist */; };
 		5D4B5FB322276EF000BA173D /* AspectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FB222276EF000BA173D /* AspectManager.swift */; };
 		5D63A8CD221F581600871932 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8CC221F581600871932 /* Theme.swift */; };
@@ -30,7 +30,11 @@
 		5D89822B221DCDF400D4BE1C /* LaVieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D89822A221DCDF400D4BE1C /* LaVieTests.swift */; };
 		5D898236221DCDF400D4BE1C /* LaVieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D898235221DCDF400D4BE1C /* LaVieUITests.swift */; };
 		5DDC4E84222B347E0012A3B6 /* GoalDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E83222B347E0012A3B6 /* GoalDetails.swift */; };
-		5DF47ED4221F56ED008F2D88 /* LVTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF47ED3221F56ED008F2D88 /* LVTabController.swift */; };
+		5DDC4E86222C4DF70012A3B6 /* LVPushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E85222C4DF70012A3B6 /* LVPushable.swift */; };
+		5DDC4E88222C53540012A3B6 /* Objective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E87222C53540012A3B6 /* Objective.swift */; };
+		5DDC4E8A222CB4FC0012A3B6 /* LVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E89222CB4FC0012A3B6 /* LVCell.swift */; };
+		5DDC4E8C222CD00C0012A3B6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E8B222CD00C0012A3B6 /* Date.swift */; };
+		5DF47ED4221F56ED008F2D88 /* LVTabbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF47ED3221F56ED008F2D88 /* LVTabbable.swift */; };
 		862BDD84713DC841B67CD60E /* Pods_LaVieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90ED558A089D3922BAEEF4B /* Pods_LaVieTests.framework */; };
 		AAF502127DF91870EFFAA634 /* Pods_LaVie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C19F279F09D4B3C8AB4536E /* Pods_LaVie.framework */; };
 /* End PBXBuildFile section */
@@ -67,8 +71,8 @@
 		5D3F4AE5222324A900B13FF8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		5D3F4AE8222324DF00B13FF8 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		5D4B5FA82226FAF100BA173D /* GoalCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCreateViewController.swift; sourceTree = "<group>"; };
-		5D4B5FAA2226FCB900BA173D /* LVModalViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVModalViewManager.swift; sourceTree = "<group>"; };
-		5D4B5FAC2227055900BA173D /* LVViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVViewManager.swift; sourceTree = "<group>"; };
+		5D4B5FAA2226FCB900BA173D /* LVModable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVModable.swift; sourceTree = "<group>"; };
+		5D4B5FAC2227055900BA173D /* LVViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVViewControllable.swift; sourceTree = "<group>"; };
 		5D4B5FAE2227376E00BA173D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D4B5FB222276EF000BA173D /* AspectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectManager.swift; sourceTree = "<group>"; };
 		5D63A8CC221F581600871932 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -87,7 +91,11 @@
 		5D898235221DCDF400D4BE1C /* LaVieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaVieUITests.swift; sourceTree = "<group>"; };
 		5D898237221DCDF400D4BE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DDC4E83222B347E0012A3B6 /* GoalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetails.swift; sourceTree = "<group>"; };
-		5DF47ED3221F56ED008F2D88 /* LVTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabController.swift; sourceTree = "<group>"; };
+		5DDC4E85222C4DF70012A3B6 /* LVPushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVPushable.swift; sourceTree = "<group>"; };
+		5DDC4E87222C53540012A3B6 /* Objective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objective.swift; sourceTree = "<group>"; };
+		5DDC4E89222CB4FC0012A3B6 /* LVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVCell.swift; sourceTree = "<group>"; };
+		5DDC4E8B222CD00C0012A3B6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		5DF47ED3221F56ED008F2D88 /* LVTabbable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabbable.swift; sourceTree = "<group>"; };
 		A29E00AAFD6C3EB27072C51F /* Pods-LaVieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.release.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4C00DF236D7FAF0DC2619D8 /* Pods_LaVieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90ED558A089D3922BAEEF4B /* Pods_LaVieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +187,7 @@
 				5D3F4AE8222324DF00B13FF8 /* Goal.swift */,
 				5D032F8F2228CCB5000FCEEC /* Aspect.swift */,
 				5DDC4E83222B347E0012A3B6 /* GoalDetails.swift */,
+				5DDC4E87222C53540012A3B6 /* Objective.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,14 +277,17 @@
 		5DF47ED2221F56CC008F2D88 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				5DF47ED3221F56ED008F2D88 /* LVTabController.swift */,
+				5DF47ED3221F56ED008F2D88 /* LVTabbable.swift */,
 				5D63A8CC221F581600871932 /* Theme.swift */,
 				5D63A8D2221F62CA00871932 /* LVTabsController.swift */,
 				5D63A8D6221F656100871932 /* LVFlatList.swift */,
-				5D4B5FAA2226FCB900BA173D /* LVModalViewManager.swift */,
-				5D4B5FAC2227055900BA173D /* LVViewManager.swift */,
+				5D4B5FAA2226FCB900BA173D /* LVModable.swift */,
+				5D4B5FAC2227055900BA173D /* LVViewControllable.swift */,
 				5D032F8D2228BF6D000FCEEC /* Utils.swift */,
 				5D032F912228CE51000FCEEC /* Documantable.swift */,
+				5DDC4E85222C4DF70012A3B6 /* LVPushable.swift */,
+				5DDC4E89222CB4FC0012A3B6 /* LVCell.swift */,
+				5DDC4E8B222CD00C0012A3B6 /* Date.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -490,9 +502,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-LaVie/Pods-LaVie-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
@@ -508,9 +522,11 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
@@ -537,18 +553,22 @@
 				5DDC4E84222B347E0012A3B6 /* GoalDetails.swift in Sources */,
 				5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */,
 				5D032F8E2228BF6D000FCEEC /* Utils.swift in Sources */,
-				5D4B5FAB2226FCB900BA173D /* LVModalViewManager.swift in Sources */,
+				5D4B5FAB2226FCB900BA173D /* LVModable.swift in Sources */,
 				5D63A8CD221F581600871932 /* Theme.swift in Sources */,
 				5D63A8D3221F62CA00871932 /* LVTabsController.swift in Sources */,
+				5DDC4E88222C53540012A3B6 /* Objective.swift in Sources */,
+				5DDC4E8A222CB4FC0012A3B6 /* LVCell.swift in Sources */,
 				5D3F4AE6222324A900B13FF8 /* GoalCell.swift in Sources */,
-				5DF47ED4221F56ED008F2D88 /* LVTabController.swift in Sources */,
+				5DF47ED4221F56ED008F2D88 /* LVTabbable.swift in Sources */,
 				5D63A8D5221F63C800871932 /* GoalListViewController.swift in Sources */,
-				5D4B5FAD2227055900BA173D /* LVViewManager.swift in Sources */,
+				5D4B5FAD2227055900BA173D /* LVViewControllable.swift in Sources */,
 				5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */,
 				5D032F922228CE51000FCEEC /* Documantable.swift in Sources */,
+				5DDC4E8C222CD00C0012A3B6 /* Date.swift in Sources */,
 				5D032F902228CCB5000FCEEC /* Aspect.swift in Sources */,
 				5D4B5FB322276EF000BA173D /* AspectManager.swift in Sources */,
 				5D898216221DCDF400D4BE1C /* AppDelegate.swift in Sources */,
+				5DDC4E86222C4DF70012A3B6 /* LVPushable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import YogaKit
 
-class GoalListViewController: UIViewController, LVTabManager {
+class GoalListViewController: UIViewController, LVTabbable {
     var tableView: LVFlatList<Goal>!
         
     override func viewDidLoad() {
@@ -68,7 +68,7 @@ class GoalListViewController: UIViewController, LVTabManager {
                 .with(refresh: fetchData)
                 .with(selection: pushShowViewController)
         
-        tableView.backgroundColor = UIColor(white: 0.9, alpha: 1)
+        tableView.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.96, alpha:1.0)
         view.addSubview(tableView)
     }
     

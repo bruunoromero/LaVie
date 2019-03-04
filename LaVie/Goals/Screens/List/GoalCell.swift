@@ -8,16 +8,19 @@
 
 import UIKit
 import SnapKit
+import PinLayout
+import FlexLayout
 
-class GoalCell: UITableViewCell {
+class GoalCell: LVCell {
+    var dueDate: UILabel!
     var cardTitle: UILabel!
     var cardIcon: UIImageView!
+    var progressLabel: UILabel!
     var cardBackgroundView: UIView!
+    var goalProgress: UIProgressView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        selectionStyle = .none
-        backgroundColor = .clear
         setupLayout()
     }
     
@@ -26,57 +29,91 @@ class GoalCell: UITableViewCell {
     }
     
     func setupLayout() {
-        setupCardBackground()
-        setupCardIcon()
-        setupCardTitle()
-    }
-    
-    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
-        if highlighted {
-            cardBackgroundView.backgroundColor = .lightGray
-        } else {
-            cardBackgroundView.backgroundColor = .white
+        contentView.flex.define { [unowned self] flex in
+            self.setupCardBackground(flex)
         }
     }
     
-    func setupCardBackground() {
+    func setupCardBackground(_ flex: Flex) {
         cardBackgroundView = UIView()
-        addSubview(cardBackgroundView)
+        cardBackgroundView.backgroundColor = .white
         
-        cardBackgroundView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(8)
+        flex.addItem(cardBackgroundView).margin(8).padding(12).direction(.row).define { [unowned self] flex in
+            self.setupCardIcon(flex)
+            self.setupCardContent(flex)
         }
         
         cardBackgroundView.layer.cornerRadius = 4
     }
     
-    func setupCardIcon() {
+    func setupCardIcon(_ flex: Flex) {
+        let divider = UIView()
         cardIcon = UIImageView()
-        addSubview(cardIcon)
-
-        cardIcon.snp.makeConstraints { make in
-            make.top.bottom.leading.equalTo(cardBackgroundView).inset(12)
-            make.width.equalTo(32)
+        cardIcon.tintColor = .gray
+        
+        flex.addItem().height(100%).width(32).justifyContent(.center).define {
+            $0.addItem(cardIcon).width(32).height(32)
         }
         
-        cardIcon.tintColor = .gray
+        flex.addItem().padding(12).height(100%).define {
+            $0.addItem(divider).backgroundColor(.lightGray).height(100%).width(1)
+        }
     }
     
-    func setupCardTitle() {
-        cardTitle = UILabel()
-        addSubview(cardTitle)
-        
-        cardTitle.snp.makeConstraints { make in
-            make.leading.equalTo(cardIcon).offset(8 + 32)
-            make.top.equalTo(cardBackgroundView).inset(16)
-            make.bottom.equalTo(cardBackgroundView).inset(16)
+    func setupCardContent(_ flex: Flex) {
+        flex.addItem().direction(.column).grow(1).define { [unowned self] flex in
+            flex.addItem().direction(.row).justifyContent(.spaceBetween).define { [unowned self] flex in
+                self.setupCardTitle(flex)
+                self.setupDueDate(flex)
+            }
+            self.setupProgress(flex)
         }
+    }
+    
+    func setupCardTitle(_ flex: Flex) {
+        cardTitle = UILabel()
+       
+        flex.addItem(cardTitle)
+    }
+    
+    func setupDueDate(_ flex: Flex) {
+        dueDate = UILabel()
+        dueDate.fontSize = 14
+        dueDate.textColor = .gray
+        flex.addItem().addItem(dueDate)
+    }
+    
+    func setupProgress(_ flex: Flex) {
+        progressLabel = UILabel()
+        goalProgress = UIProgressView()
         
+        progressLabel.fontSize = 12
+        progressLabel.textColor = .gray
+        
+        goalProgress.trackTintColor = .lightGray
+        
+        
+        flex.addItem().direction(.column).marginTop(8).define {
+            $0.addItem(goalProgress).width(80)
+            $0.addItem(progressLabel).marginTop(4)
+        }
+    }
+    
+    func getProgress(objectives: [Objective]) -> Float {
+        let total = Float(objectives.count)
+        let totalDone = Float(objectives.filter { $0.isDone }.count)
+        
+        return totalDone / total
     }
     
     func with(goal: Goal) -> GoalCell {
+        let progress = getProgress(objectives: goal.objectives)
+        
         cardTitle.text = goal.title
         cardIcon.image = AspectManager.icon(from: goal.aspect)
+        dueDate.text = goal.dueDate.short
+        goalProgress.setProgress(progress, animated: true)
+        progressLabel.text = "\(progress * 100)% \(i18n("completed"))"
         
         return self
     }
