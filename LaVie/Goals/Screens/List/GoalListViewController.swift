@@ -55,10 +55,9 @@ class GoalListViewController: UIViewController, LVTabbable {
     }
     
     func setupTableView() {
-        let cellBuilder = { (el: Goal, cell: UITableViewCell) -> UITableViewCell in
+        let cellBuilder = { (goal: Goal, cell: UITableViewCell) -> UITableViewCell in
             let goalCell = cell as! GoalCell
-            
-            return goalCell.with(goal: el)
+            return goalCell.with(goal: goal)
         }
         
         tableView =

@@ -10,11 +10,11 @@ import Firebase
 
 struct Goal: Documentable {
     let id: String?
-    let title: String
-    let aspect: String
-    let objectives: [Objective]
-    let motivations: [String]
-    let dueDate: Date
+    var title: String
+    var aspect: String
+    var objectives: [Objective]
+    var motivations: [String]
+    var dueDate: Date
     let createdAt: Date
     
     init(id: String? = nil, title: String, aspect: String, objectives: [Objective], motivations: [String], dueDate: Date) {

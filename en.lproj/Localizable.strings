@@ -26,3 +26,6 @@
 "new_objective" = "New Objective";
 "what_is_the_aspect_of_your_goal" = "What's the aspect of your goal?";
 "when_you_should_reach_your_goal" = "When you should reach your goal?";
+
+// GOAL - SHOW
+"delete" = "Delete";

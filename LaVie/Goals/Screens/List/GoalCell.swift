@@ -103,16 +103,16 @@ class GoalCell: LVCell {
         
         return totalDone / total
     }
-    
-    func with(goal: Goal) -> GoalCell {
+
+    func with(goal: Goal) -> Self {
         let progress = getProgress(objectives: goal.objectives)
-        
+
         cardTitle.text = goal.title
         cardIcon.image = AspectManager.icon(from: goal.aspect)
         dueDate.text = goal.dueDate.short
         goalProgress.setProgress(progress, animated: true)
         progressLabel.text = "\(progress * 100)% \(i18n("completed"))"
-        
+
         return self
     }
 }

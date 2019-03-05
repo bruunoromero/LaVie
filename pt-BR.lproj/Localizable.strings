@@ -26,3 +26,6 @@
 "new_objective" = "Novo objetivo";
 "what_is_the_aspect_of_your_goal" = "Qual o aspecto da sua meta?";
 "when_you_should_reach_your_goal" = "Quando você deve bater sua meta?";
+
+// GOAL - SHOW
+"delete" = "Excluir";
