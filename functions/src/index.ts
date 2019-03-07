@@ -12,7 +12,6 @@ export const createGoalAction = functions.firestore
       if (!data) return;
 
       const numberOfActions = (data.numberOfActions || 0) + 1;
-      console.log(numberOfActions);
       await tx.update(goal, { numberOfActions });
     });
   });

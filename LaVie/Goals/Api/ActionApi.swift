@@ -21,7 +21,6 @@ class ActionApi {
                 } else {
                     onSuccess()
                 }
-            }
-        }
+            }        }
     }
 }
