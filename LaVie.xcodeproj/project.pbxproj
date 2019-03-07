@@ -20,6 +20,8 @@
 		5D4B5FAD2227055900BA173D /* LVViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAC2227055900BA173D /* LVViewControllable.swift */; };
 		5D4B5FAF2227376E00BA173D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B5FAE2227376E00BA173D /* GoogleService-Info.plist */; };
 		5D4B5FB322276EF000BA173D /* AspectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B5FB222276EF000BA173D /* AspectManager.swift */; };
+		5D5BB78622319B78008823F6 /* ActionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BB78522319B78008823F6 /* ActionApi.swift */; };
+		5D5BB78822319C54008823F6 /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BB78722319C54008823F6 /* Firestore.swift */; };
 		5D63A8CD221F581600871932 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8CC221F581600871932 /* Theme.swift */; };
 		5D63A8D3221F62CA00871932 /* LVTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D2221F62CA00871932 /* LVTabsController.swift */; };
 		5D63A8D5221F63C800871932 /* GoalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63A8D4221F63C800871932 /* GoalListViewController.swift */; };
@@ -80,6 +82,8 @@
 		5D4B5FAC2227055900BA173D /* LVViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVViewControllable.swift; sourceTree = "<group>"; };
 		5D4B5FAE2227376E00BA173D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D4B5FB222276EF000BA173D /* AspectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectManager.swift; sourceTree = "<group>"; };
+		5D5BB78522319B78008823F6 /* ActionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionApi.swift; sourceTree = "<group>"; };
+		5D5BB78722319C54008823F6 /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
 		5D63A8CC221F581600871932 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		5D63A8D2221F62CA00871932 /* LVTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabsController.swift; sourceTree = "<group>"; };
 		5D63A8D4221F63C800871932 /* GoalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				5DD87F32222F1D2E0054B324 /* GoalApi.swift */,
+				5D5BB78522319B78008823F6 /* ActionApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				5DDC4E89222CB4FC0012A3B6 /* LVCell.swift */,
 				5DDC4E8B222CD00C0012A3B6 /* Date.swift */,
 				5DD87F382230A5D70054B324 /* LVViewModel.swift */,
+				5D5BB78722319C54008823F6 /* Firestore.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -582,6 +588,7 @@
 				5D10CEF7222361AD00205B27 /* GoalShowViewController.swift in Sources */,
 				5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */,
 				5D032F8E2228BF6D000FCEEC /* Utils.swift in Sources */,
+				5D5BB78622319B78008823F6 /* ActionApi.swift in Sources */,
 				5DD87F3B2230AD8B0054B324 /* ActionCell.swift in Sources */,
 				5D4B5FAB2226FCB900BA173D /* LVModable.swift in Sources */,
 				5D63A8CD221F581600871932 /* Theme.swift in Sources */,
@@ -591,6 +598,7 @@
 				5D3F4AE6222324A900B13FF8 /* GoalCell.swift in Sources */,
 				5DF47ED4221F56ED008F2D88 /* LVTabbable.swift in Sources */,
 				5D63A8D5221F63C800871932 /* GoalListViewController.swift in Sources */,
+				5D5BB78822319C54008823F6 /* Firestore.swift in Sources */,
 				5D4B5FAD2227055900BA173D /* LVViewControllable.swift in Sources */,
 				5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */,
 				5DD87F35223046F30054B324 /* GoalShowViewModel.swift in Sources */,

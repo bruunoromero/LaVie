@@ -39,20 +39,11 @@ class GoalListViewModel {
     }
     
     private func bind(_ goal: Goal, to cell: GoalCell) {
-        let progress = getProgress(from: goal.actions)
-        
         cell.cardTitle.text = goal.title
         cell.cardIcon.image = AspectManager.icon(from: goal.aspect)
         cell.dueDate.text = goal.dueDate.short
-        cell.goalProgress.setProgress(progress, animated: true)
-        cell.progressLabel.text = "\(progress * 100)% \(i18n("completed"))"
-    }
-    
-    private func getProgress(from actions: [Action]) -> Float {
-        let total = Float(actions.count)
-        let totalDone = Float(actions.filter { $0.isDone }.count)
-        
-        return totalDone / total
+        cell.goalProgress.setProgress(goal.progress / 100, animated: true)
+        cell.progressLabel.text = "\(goal.progress)% \(i18n("completed"))"
     }
     
     func accept(_ goals: [Goal]) {

@@ -7,18 +7,21 @@
 //
 import Firebase
 
-struct Action: Mappable {
-    let title: String
-    let isDone: Bool
+struct Action: Documentable {
+    let id: String?
+    var title: String
+    var isDone: Bool
     
-    init(title: String, isDone: Bool = false) {
+    init(id: String? = nil, title: String, isDone: Bool = false) {
+        self.id = id
         self.title = title
         self.isDone = isDone
     }
     
-    init(from dictionary: NSDictionary) {
-        self.title = dictionary["title"] as! String
-        self.isDone = dictionary["isDone"] as! Bool
+    init(from document: QueryDocumentSnapshot) {
+        self.id = document.documentID
+        self.title = document["title"] as! String
+        self.isDone = document["isDone"] as! Bool
     }
     
     func toDocument() -> [String : Any] {

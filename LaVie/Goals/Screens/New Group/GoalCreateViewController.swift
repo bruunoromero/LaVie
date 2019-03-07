@@ -42,15 +42,9 @@ class GoalCreateViewController: FormViewController, LVModable {
             return
         }
         
-        let goal = Goal(title: title, aspect: aspect.name, actions: actions, dueDate: dueDate)
+        let goal = Goal(title: title, aspect: aspect.name, actions: actions, progress: 0.0, dueDate: dueDate)
         
-        Goal.collection.addDocument(data: goal.toDocument(), completion: { [unowned self] error in
-            if let err = error {
-                print(err.localizedDescription)
-            } else {
-                self.animatedDismiss()
-            }
-        })
+        GoalApi.insert(goal: goal, onSucess: self.animatedDismiss)
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -12,29 +12,26 @@ struct Goal: Documentable {
     let id: String?
     var title: String
     var aspect: String
-    var actions: [Action]
+    var actions: [Action]?
     var dueDate: Date
+    var progress: Float
     let createdAt: Date
     
-    init(id: String? = nil, title: String, aspect: String, actions: [Action], dueDate: Date) {
+    init(id: String? = nil, title: String, aspect: String, actions: [Action], progress: Float, dueDate: Date) {
         self.id = id
         self.title = title
         self.aspect = aspect
         self.actions = actions
         self.dueDate = dueDate
+        self.progress = progress
         self.createdAt = Date()
     }
     
     init(from document: QueryDocumentSnapshot) {
-        let acts: [Action] = (document["actions"] as! NSArray).map {
-            let action = $0 as! NSDictionary
-            return Action(from: action)
-        }
-        
-        actions = acts
         id = document.documentID
         title = document["title"] as! String
         aspect = document["aspect"] as! String
+        progress = document["progress"] as! Float
         dueDate = (document["dueDate"] as! Timestamp).dateValue()
         createdAt = (document["createdAt"] as! Timestamp).dateValue()
     }
@@ -47,7 +44,7 @@ struct Goal: Documentable {
         return [
             "title": title,
             "aspect": aspect,
-            "actions": actions.map { $0.toDocument() },
+            "progress": progress,
             "dueDate": Timestamp(date: dueDate),
             "createdAt": Timestamp(date: createdAt)
         ]

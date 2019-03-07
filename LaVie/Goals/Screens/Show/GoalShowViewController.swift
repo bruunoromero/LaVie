@@ -14,9 +14,9 @@ import Firebase
 
 class GoalShowViewController: UIViewController, LVPushable {
     var goal: Goal!
+    var actions: [Action] = []
     var tableView: UITableView!
     var viewModel: GoalShowViewModel!
-    var actions: Observable<[Action]>!
 
     convenience init(goal: Goal) {
         self.init(title: goal.title)
@@ -30,6 +30,10 @@ class GoalShowViewController: UIViewController, LVPushable {
         setupNavigationBar()
         setupForm()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        fetchData()
+    }
 
     func setupNavigationBar() {
         navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editGoal))]
@@ -37,6 +41,14 @@ class GoalShowViewController: UIViewController, LVPushable {
 
     @objc func editGoal() {
 
+    }
+    
+    func fetchData() {
+        if let id = goal.id {
+            GoalApi.getActions(from: id, onSucess: { [unowned self] actions in
+                self.viewModel.accept(event: actions)
+            })
+        }
     }
 
     func setupForm() {
@@ -48,20 +60,32 @@ class GoalShowViewController: UIViewController, LVPushable {
         tableView = UITableView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         tableView.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.96, alpha:1.0)
         tableView.separatorStyle = .none
-        
+
         view.addSubview(tableView)
+    }
+    
+    func updateActions(updated: Action) {
+        var actions = viewModel.actions.value
+        
+        let oldActionIndex = actions.firstIndex { $0.id == updated.id }
+        let index = oldActionIndex!
+        actions[index..<index + 1] = [updated]
+        self.viewModel.accept(event: actions)
+        
+    }
+    
+    func toogleIsDone(_ action: Action) {
+        let newAction = Action(id: action.id, title: action.title, isDone: !action.isDone)
+        ActionApi.update(action: newAction, from: goal.id!, onSuccess: { [unowned self] in
+            self.updateActions(updated: newAction)
+        })
+        
     }
     
     func setupViewModel() {
         viewModel = GoalShowViewModel(tableView: tableView)
         viewModel.setup()
-        
-        let notDoneActions = goal.actions.filter { !$0.isDone }
-        let doneActions = goal.actions.filter { $0.isDone }
-        
-        viewModel.accept(event: [
-            ActionSectionModel(header: "\(i18n("not_done_p")) (\(notDoneActions.count))", items: notDoneActions),
-            ActionSectionModel(header: "\(i18n("done_p")) (\(doneActions.count))", items: doneActions)
-        ])
+        viewModel.on(selected: toogleIsDone(_:))
+        viewModel.accept(event: goal.actions ?? [])
     }
 }

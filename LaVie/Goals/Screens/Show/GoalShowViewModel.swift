@@ -15,10 +15,13 @@ class GoalShowViewModel: LVViewModel<[ActionSectionModel]> {
     let cellId = "ActionCell"
     let tableView: UITableView!
     let disposeBag = DisposeBag()
+    let actions: BehaviorRelay<[Action]> = BehaviorRelay(value: [])
     
     init(tableView: UITableView) {
         self.tableView = tableView
         super.init(data: [])
+        
+        actions.bind(onNext: mapActionsToSection).disposed(by: disposeBag)
     }
     
     func setup() {
@@ -42,5 +45,25 @@ class GoalShowViewModel: LVViewModel<[ActionSectionModel]> {
         }
         
         data.asObservable().bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+    }
+    
+    func accept(event: [Action]) {
+        actions.accept(event)
+    }
+    
+    func on(selected: @escaping (Action) -> Void) {
+        tableView.rx.modelSelected(Action.self).subscribe(onNext: { element in
+            selected(element)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func mapActionsToSection(actions: [Action]) {
+        let notDoneActions = actions.filter { !$0.isDone }
+        let doneActions = actions.filter { $0.isDone }
+        
+        data.accept([
+            ActionSectionModel(header: "\(i18n("not_done_p")) (\(notDoneActions.count))", items: notDoneActions),
+            ActionSectionModel(header: "\(i18n("done_p")) (\(doneActions.count))", items: doneActions)
+        ])
     }
 }
