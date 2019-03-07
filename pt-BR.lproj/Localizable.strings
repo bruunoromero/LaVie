@@ -15,17 +15,16 @@
 "aspect" = "Aspecto";
 "title" = "Título";
 "what_is_your_goal" = "Qual a sua meta?";
-"motivations" = "Motivações";
-"motivation" = "Motivação";
-"new_motivation" = "Nova motivação";
 "due_date" = "Termina em";
 "work" = "Trabalho";
 "health" = "Saúde";
-"objective" = "Objetivo";
-"objectives" = "Objetivos";
-"new_objective" = "Novo objetivo";
+"action" = "Ação";
+"actions" = "Ações";
+"new_action" = "Nova ação";
 "what_is_the_aspect_of_your_goal" = "Qual o aspecto da sua meta?";
 "when_you_should_reach_your_goal" = "Quando você deve bater sua meta?";
 
 // GOAL - SHOW
 "delete" = "Excluir";
+"not_done_p" = "Não concuídos";
+"done_p" = "Concuídos";

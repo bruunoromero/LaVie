@@ -7,7 +7,7 @@
 //
 import Firebase
 
-struct Objective: Mappable {
+struct Action: Mappable {
     let title: String
     let isDone: Bool
     

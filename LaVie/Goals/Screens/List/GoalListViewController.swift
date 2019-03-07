@@ -8,33 +8,25 @@
 
 import UIKit
 import Firebase
-import YogaKit
+import RxCocoa
+import RxSwift
 
 class GoalListViewController: UIViewController, LVTabbable {
-    var tableView: LVFlatList<Goal>!
+    var tableView: UITableView!
+    var viewModel: GoalListViewModel!
         
     override func viewDidLoad() {
         super.viewDidLoad()
         managerDidLoad()
-        setupLayout()
+        setup()
     }
     
-    func fetchData(tableView: LVFlatList<Goal>) {
-        Firestore.firestore().collection("goals").getDocuments { snapshot, error in
-            if let _ = error {
-                
-            } else {
-                let data = snapshot!.documents.map { document in
-                    return Goal(from: document)
-                }
-                
-                tableView.update(data: data)
-            }
-        }
+    func fetchData() {
+        GoalApi.getGoals(onSuccess: viewModel.accept(_:))
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
-        fetchData(tableView: tableView)
+        fetchData()
     }
     
     func setupNavigationBar() {
@@ -45,30 +37,28 @@ class GoalListViewController: UIViewController, LVTabbable {
         self.navigationController?.present(UINavigationController(rootViewController: GoalCreateViewController(title: i18n("new_goal"))), animated: true)
     }
     
-    func pushShowViewController(index: Int, goal: Goal) {
+    func pushShowViewController(_ goal: Goal) {
         self.navigationController?.pushViewController(GoalShowViewController(goal: goal), animated: true)
     }
     
-    func setupLayout() {
+    func setup() {
         setupNavigationBar()
         setupTableView()
+        setupViewModel()
     }
     
     func setupTableView() {
-        let cellBuilder = { (goal: Goal, cell: UITableViewCell) -> UITableViewCell in
-            let goalCell = cell as! GoalCell
-            return goalCell.with(goal: goal)
-        }
-        
-        tableView =
-            LVFlatList(builder: cellBuilder)
-                .with(cell: GoalCell.self)
-                .with(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
-                .with(refresh: fetchData)
-                .with(selection: pushShowViewController)
-        
+        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         tableView.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.96, alpha:1.0)
+        tableView.separatorStyle = .none
+        tableView.on(refresh: fetchData)
         view.addSubview(tableView)
+    }
+    
+    func setupViewModel() {
+        viewModel = GoalListViewModel(tableView: tableView)
+        viewModel.on(selected: pushShowViewController(_:))
+        viewModel.setup()
     }
     
 }

@@ -12,32 +12,29 @@ struct Goal: Documentable {
     let id: String?
     var title: String
     var aspect: String
-    var objectives: [Objective]
-    var motivations: [String]
+    var actions: [Action]
     var dueDate: Date
     let createdAt: Date
     
-    init(id: String? = nil, title: String, aspect: String, objectives: [Objective], motivations: [String], dueDate: Date) {
+    init(id: String? = nil, title: String, aspect: String, actions: [Action], dueDate: Date) {
         self.id = id
         self.title = title
         self.aspect = aspect
-        self.objectives = objectives
-        self.motivations = motivations
+        self.actions = actions
         self.dueDate = dueDate
         self.createdAt = Date()
     }
     
     init(from document: QueryDocumentSnapshot) {
-        let objs: [Objective] = (document["objectives"] as! NSArray).map {
-            let objective = $0 as! NSDictionary
-            return Objective(from: objective)
+        let acts: [Action] = (document["actions"] as! NSArray).map {
+            let action = $0 as! NSDictionary
+            return Action(from: action)
         }
         
-        objectives = objs
+        actions = acts
         id = document.documentID
         title = document["title"] as! String
         aspect = document["aspect"] as! String
-        motivations = document["motivations"] as! [String]
         dueDate = (document["dueDate"] as! Timestamp).dateValue()
         createdAt = (document["createdAt"] as! Timestamp).dateValue()
     }
@@ -46,12 +43,11 @@ struct Goal: Documentable {
         return Firestore.firestore().collection("goals")
     }
     
-    func toDocument() -> [String : Any] {
+    func toDocument() -> [String:Any] {
         return [
             "title": title,
             "aspect": aspect,
-            "objectives": objectives.map { $0.toDocument() },
-            "motivations": motivations,
+            "actions": actions.map { $0.toDocument() },
             "dueDate": Timestamp(date: dueDate),
             "createdAt": Timestamp(date: createdAt)
         ]

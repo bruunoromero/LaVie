@@ -76,8 +76,9 @@ class GoalCell: LVCell {
     
     func setupDueDate(_ flex: Flex) {
         dueDate = UILabel()
-        dueDate.fontSize = 14
         dueDate.textColor = .gray
+        dueDate.font = UIFont.systemFont(ofSize: 14)
+        
         flex.addItem().addItem(dueDate)
     }
     
@@ -85,8 +86,8 @@ class GoalCell: LVCell {
         progressLabel = UILabel()
         goalProgress = UIProgressView()
         
-        progressLabel.fontSize = 12
         progressLabel.textColor = .gray
+        progressLabel.font = UIFont.systemFont(ofSize: 12)
         
         goalProgress.trackTintColor = .lightGray
         
@@ -95,24 +96,5 @@ class GoalCell: LVCell {
             $0.addItem(goalProgress).width(80)
             $0.addItem(progressLabel).marginTop(4)
         }
-    }
-    
-    func getProgress(objectives: [Objective]) -> Float {
-        let total = Float(objectives.count)
-        let totalDone = Float(objectives.filter { $0.isDone }.count)
-        
-        return totalDone / total
-    }
-
-    func with(goal: Goal) -> Self {
-        let progress = getProgress(objectives: goal.objectives)
-
-        cardTitle.text = goal.title
-        cardIcon.image = AspectManager.icon(from: goal.aspect)
-        dueDate.text = goal.dueDate.short
-        goalProgress.setProgress(progress, animated: true)
-        progressLabel.text = "\(progress * 100)% \(i18n("completed"))"
-
-        return self
     }
 }

@@ -8,18 +8,19 @@
 
 import UIKit
 import Eureka
+import RxSwift
+import RxCocoa
 import Firebase
 
-class GoalShowViewController: FormViewController, LVPushable {
+class GoalShowViewController: UIViewController, LVPushable {
     var goal: Goal!
-    var titleRow: TextRow!
-    var dueDateRow: DateRow!
-    var aspectsRow: PushRow<Aspect>!
-    var objectivesSection: SelectableSection<ListCheckRow<String>>!
-    var motivationsSection: SelectableSection<ListCheckRow<String>>!
+    var tableView: UITableView!
+    var viewModel: GoalShowViewModel!
+    var actions: Observable<[Action]>!
 
     convenience init(goal: Goal) {
         self.init(title: goal.title)
+        
         self.goal = goal
     }
 
@@ -39,87 +40,28 @@ class GoalShowViewController: FormViewController, LVPushable {
     }
 
     func setupForm() {
-        setupObjectives()
-        setupMotivations()
-    }
-
-    func deleteObjective(at index: Int) -> SwipeActionHandler {
-        return { [unowned self] (action, row, completion) in
-            self.goal.objectives.remove(at: index)
-            self.objectivesSection.remove(at: index)
-            completion?(true)
-
-            if self.goal.objectives.count == 0 {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                    self.form.remove(at: self.objectivesSection.index!)
-                }
-            }
-
-        }
+        setupTableView()
+        setupViewModel()
     }
     
-    func deleteMotivation(at index: Int) -> SwipeActionHandler {
-        return { [unowned self] (action, row, completion) in
-            self.goal.motivations.remove(at: index)
-            self.motivationsSection.remove(at: index)
-            completion?(true)
-            
-            if self.goal.motivations.count == 0 {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                    self.form.remove(at: self.motivationsSection.index!)
-                }
-            }
-            
-        }
+    func setupTableView() {
+        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        tableView.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.96, alpha:1.0)
+        tableView.separatorStyle = .none
+        
+        view.addSubview(tableView)
     }
-
-    func setupObjectives() {
-        objectivesSection = SelectableSection<ListCheckRow<String>>(i18n("objectives"), selectionType: .multipleSelection)
-
-        form +++ objectivesSection
-
-        for index in goal.objectives.indices {
-            let objective = goal.objectives[index]
-            let row = ListCheckRow<String> { row in
-                row.title = objective.title
-                row.selectableValue = objective.title
-                row.value = objective.isDone ? objective.title : nil
-            }
-
-            row.trailingSwipe.actions = [
-                SwipeAction(
-                        style: .destructive,
-                        title: i18n("delete"),
-                        handler: deleteObjective(at: index)
-                )
-            ]
-
-            form.last! <<< row
-        }
-    }
-
-    func setupMotivations() {
-        motivationsSection = SelectableSection<ListCheckRow<String>>(i18n("motivations"), selectionType: .multipleSelection)
-
-        form +++ motivationsSection
-
-        for index in goal.motivations.indices {
-            let motivation = goal.motivations[index]
-            
-            let row = ListCheckRow<String> { row in
-                row.title = motivation
-                row.value = nil
-            }
-            
-            row.trailingSwipe.actions = [
-                SwipeAction(
-                    style: .destructive,
-                    title: i18n("delete"),
-                    handler: deleteMotivation(at: index)
-                )
-            ]
-            
-            form.last! <<< row
-        }
+    
+    func setupViewModel() {
+        viewModel = GoalShowViewModel(tableView: tableView)
+        viewModel.setup()
+        
+        let notDoneActions = goal.actions.filter { !$0.isDone }
+        let doneActions = goal.actions.filter { $0.isDone }
+        
+        viewModel.accept(event: [
+            ActionSectionModel(header: "\(i18n("not_done_p")) (\(notDoneActions.count))", items: notDoneActions),
+            ActionSectionModel(header: "\(i18n("done_p")) (\(doneActions.count))", items: doneActions)
+        ])
     }
 }

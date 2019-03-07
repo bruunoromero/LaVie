@@ -12,15 +12,16 @@ target 'LaVie' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Eureka', '~> 4.3.1'
-
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
+  pod 'RxDataSources', '~> 3.0'
+  
   target 'LaVieTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
   target 'LaVieUITests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
 end

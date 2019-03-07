@@ -29,9 +29,14 @@
 		5D898220221DCDF400D4BE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D89821E221DCDF400D4BE1C /* LaunchScreen.storyboard */; };
 		5D89822B221DCDF400D4BE1C /* LaVieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D89822A221DCDF400D4BE1C /* LaVieTests.swift */; };
 		5D898236221DCDF400D4BE1C /* LaVieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D898235221DCDF400D4BE1C /* LaVieUITests.swift */; };
-		5DDC4E84222B347E0012A3B6 /* GoalDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E83222B347E0012A3B6 /* GoalDetails.swift */; };
+		5DD87F30222EFE280054B324 /* GoalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD87F2F222EFE280054B324 /* GoalListViewModel.swift */; };
+		5DD87F33222F1D2E0054B324 /* GoalApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD87F32222F1D2E0054B324 /* GoalApi.swift */; };
+		5DD87F35223046F30054B324 /* GoalShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD87F34223046F30054B324 /* GoalShowViewModel.swift */; };
+		5DD87F372230A3FA0054B324 /* ActionSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD87F362230A3FA0054B324 /* ActionSectionModel.swift */; };
+		5DD87F392230A5D70054B324 /* LVViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD87F382230A5D70054B324 /* LVViewModel.swift */; };
+		5DD87F3B2230AD8B0054B324 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD87F3A2230AD8B0054B324 /* ActionCell.swift */; };
 		5DDC4E86222C4DF70012A3B6 /* LVPushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E85222C4DF70012A3B6 /* LVPushable.swift */; };
-		5DDC4E88222C53540012A3B6 /* Objective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E87222C53540012A3B6 /* Objective.swift */; };
+		5DDC4E88222C53540012A3B6 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E87222C53540012A3B6 /* Action.swift */; };
 		5DDC4E8A222CB4FC0012A3B6 /* LVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E89222CB4FC0012A3B6 /* LVCell.swift */; };
 		5DDC4E8C222CD00C0012A3B6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC4E8B222CD00C0012A3B6 /* Date.swift */; };
 		5DF47ED4221F56ED008F2D88 /* LVTabbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF47ED3221F56ED008F2D88 /* LVTabbable.swift */; };
@@ -90,9 +95,14 @@
 		5D898231221DCDF400D4BE1C /* LaVieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaVieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D898235221DCDF400D4BE1C /* LaVieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaVieUITests.swift; sourceTree = "<group>"; };
 		5D898237221DCDF400D4BE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DDC4E83222B347E0012A3B6 /* GoalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetails.swift; sourceTree = "<group>"; };
+		5DD87F2F222EFE280054B324 /* GoalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListViewModel.swift; sourceTree = "<group>"; };
+		5DD87F32222F1D2E0054B324 /* GoalApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalApi.swift; sourceTree = "<group>"; };
+		5DD87F34223046F30054B324 /* GoalShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalShowViewModel.swift; sourceTree = "<group>"; };
+		5DD87F362230A3FA0054B324 /* ActionSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSectionModel.swift; sourceTree = "<group>"; };
+		5DD87F382230A5D70054B324 /* LVViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVViewModel.swift; sourceTree = "<group>"; };
+		5DD87F3A2230AD8B0054B324 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
 		5DDC4E85222C4DF70012A3B6 /* LVPushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVPushable.swift; sourceTree = "<group>"; };
-		5DDC4E87222C53540012A3B6 /* Objective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objective.swift; sourceTree = "<group>"; };
+		5DDC4E87222C53540012A3B6 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		5DDC4E89222CB4FC0012A3B6 /* LVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVCell.swift; sourceTree = "<group>"; };
 		5DDC4E8B222CD00C0012A3B6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		5DF47ED3221F56ED008F2D88 /* LVTabbable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabbable.swift; sourceTree = "<group>"; };
@@ -157,6 +167,7 @@
 		5D10CEF42223618900205B27 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
+				5DD87F31222F1D210054B324 /* Api */,
 				5D4B5FB122276ED800BA173D /* Utils */,
 				5D3F4AE7222324CE00B13FF8 /* Models */,
 				5DF47ED1221F56BF008F2D88 /* Screens */,
@@ -168,6 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				5D10CEF6222361AD00205B27 /* GoalShowViewController.swift */,
+				5DD87F34223046F30054B324 /* GoalShowViewModel.swift */,
+				5DD87F362230A3FA0054B324 /* ActionSectionModel.swift */,
+				5DD87F3A2230AD8B0054B324 /* ActionCell.swift */,
 			);
 			path = Show;
 			sourceTree = "<group>";
@@ -177,6 +191,7 @@
 			children = (
 				5D63A8D4221F63C800871932 /* GoalListViewController.swift */,
 				5D3F4AE5222324A900B13FF8 /* GoalCell.swift */,
+				5DD87F2F222EFE280054B324 /* GoalListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -186,8 +201,7 @@
 			children = (
 				5D3F4AE8222324DF00B13FF8 /* Goal.swift */,
 				5D032F8F2228CCB5000FCEEC /* Aspect.swift */,
-				5DDC4E83222B347E0012A3B6 /* GoalDetails.swift */,
-				5DDC4E87222C53540012A3B6 /* Objective.swift */,
+				5DDC4E87222C53540012A3B6 /* Action.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,6 +278,14 @@
 			path = LaVieUITests;
 			sourceTree = "<group>";
 		};
+		5DD87F31222F1D210054B324 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				5DD87F32222F1D2E0054B324 /* GoalApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		5DF47ED1221F56BF008F2D88 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +310,7 @@
 				5DDC4E85222C4DF70012A3B6 /* LVPushable.swift */,
 				5DDC4E89222CB4FC0012A3B6 /* LVCell.swift */,
 				5DDC4E8B222CD00C0012A3B6 /* Date.swift */,
+				5DD87F382230A5D70054B324 /* LVViewModel.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -501,6 +524,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LaVie/Pods-LaVie-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -508,9 +532,10 @@
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
-				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -521,6 +546,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -528,9 +554,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -549,22 +576,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4B5FA92226FAF100BA173D /* GoalCreateViewController.swift in Sources */,
+				5DD87F392230A5D70054B324 /* LVViewModel.swift in Sources */,
+				5DD87F372230A3FA0054B324 /* ActionSectionModel.swift in Sources */,
+				5DD87F30222EFE280054B324 /* GoalListViewModel.swift in Sources */,
 				5D10CEF7222361AD00205B27 /* GoalShowViewController.swift in Sources */,
-				5DDC4E84222B347E0012A3B6 /* GoalDetails.swift in Sources */,
 				5D63A8D7221F656100871932 /* LVFlatList.swift in Sources */,
 				5D032F8E2228BF6D000FCEEC /* Utils.swift in Sources */,
+				5DD87F3B2230AD8B0054B324 /* ActionCell.swift in Sources */,
 				5D4B5FAB2226FCB900BA173D /* LVModable.swift in Sources */,
 				5D63A8CD221F581600871932 /* Theme.swift in Sources */,
 				5D63A8D3221F62CA00871932 /* LVTabsController.swift in Sources */,
-				5DDC4E88222C53540012A3B6 /* Objective.swift in Sources */,
+				5DDC4E88222C53540012A3B6 /* Action.swift in Sources */,
 				5DDC4E8A222CB4FC0012A3B6 /* LVCell.swift in Sources */,
 				5D3F4AE6222324A900B13FF8 /* GoalCell.swift in Sources */,
 				5DF47ED4221F56ED008F2D88 /* LVTabbable.swift in Sources */,
 				5D63A8D5221F63C800871932 /* GoalListViewController.swift in Sources */,
 				5D4B5FAD2227055900BA173D /* LVViewControllable.swift in Sources */,
 				5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */,
+				5DD87F35223046F30054B324 /* GoalShowViewModel.swift in Sources */,
 				5D032F922228CE51000FCEEC /* Documantable.swift in Sources */,
 				5DDC4E8C222CD00C0012A3B6 /* Date.swift in Sources */,
+				5DD87F33222F1D2E0054B324 /* GoalApi.swift in Sources */,
 				5D032F902228CCB5000FCEEC /* Aspect.swift in Sources */,
 				5D4B5FB322276EF000BA173D /* AspectManager.swift in Sources */,
 				5D898216221DCDF400D4BE1C /* AppDelegate.swift in Sources */,

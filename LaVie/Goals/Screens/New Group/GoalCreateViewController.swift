@@ -14,8 +14,7 @@ class GoalCreateViewController: FormViewController, LVModable {
     var titleRow: TextRow!
     var dueDateRow: DateRow!
     var aspectsRow: PushRow<Aspect>!
-    var objectivesSection: MultivaluedSection!
-    var motivationsSection: MultivaluedSection!
+    var actionsSection: MultivaluedSection!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +28,7 @@ class GoalCreateViewController: FormViewController, LVModable {
     }
     
     @objc func createGoal() {
-        let objectives = objectivesSection.values().compactMap { $0 as? String }.map { Objective(title: $0) }
-        let motivations = motivationsSection.values().compactMap { $0 as? String }
+        let actions = actionsSection.values().compactMap { $0 as? String }.map { Action(title: $0) }
         
         guard let title = titleRow.value else {
             return
@@ -44,7 +42,7 @@ class GoalCreateViewController: FormViewController, LVModable {
             return
         }
         
-        let goal = Goal(title: title, aspect: aspect.name, objectives: objectives, motivations: motivations, dueDate: dueDate)
+        let goal = Goal(title: title, aspect: aspect.name, actions: actions, dueDate: dueDate)
         
         Goal.collection.addDocument(data: goal.toDocument(), completion: { [unowned self] error in
             if let err = error {
@@ -65,8 +63,7 @@ class GoalCreateViewController: FormViewController, LVModable {
     
     func setupForm() {
         setupTitleRow()
-        setupObjectives()
-        setupMotivations()
+        setupActions()
         setupAspect()
         setupDueDate()
     }
@@ -81,42 +78,23 @@ class GoalCreateViewController: FormViewController, LVModable {
         form +++ Section(i18n("title")) <<< titleRow
     }
     
-    func setupObjectives() {
-        objectivesSection = MultivaluedSection(multivaluedOptions: [.Insert, .Delete], header: i18n("objectives")) { section in
+    func setupActions() {
+        actionsSection = MultivaluedSection(multivaluedOptions: [.Insert, .Delete], header: i18n("actions")) { section in
             section.addButtonProvider = { provider in
                 return ButtonRow() { row in
-                    row.title = i18n("new_objective")
+                    row.title = i18n("new_action")
                 }
             }
             
             section.multivaluedRowToInsertAt = { provider in
                 return TextRow() { row in
-                    row.placeholder = i18n("objective")
+                    row.placeholder = i18n("action")
                     row.add(rule: RuleRequired())
                 }
             }
         }
         
-        form +++ objectivesSection
-    }
-    
-    func setupMotivations() {
-        motivationsSection = MultivaluedSection(multivaluedOptions: [.Insert, .Delete], header: i18n("motivations")) { section in
-            section.addButtonProvider = { provider in
-                return ButtonRow() { row in
-                    row.title = i18n("new_motivation")
-                }
-            }
-            
-            section.multivaluedRowToInsertAt = { provider in
-                return TextRow() { row in
-                    row.placeholder = i18n("motivation")
-                    row.add(rule: RuleRequired())
-                }
-            }
-        }
-        
-        form +++ motivationsSection
+        form +++ actionsSection
     }
     
     func setupAspect() {

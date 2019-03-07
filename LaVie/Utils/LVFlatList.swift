@@ -8,18 +8,17 @@
 
 import UIKit
 
-
+typealias Refresher = () -> Void
 
 class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
     typealias Event = (Int, T) -> Void
-    typealias Refresher = (LVFlatList) -> Void
     
-    private var data: [T]?
-    private var onSelect: Event?
-    private var identifier: String
-    private var onRefresh: Refresher?
-    private var customRefreshControl: UIRefreshControl!
-    private var builder: (T, UITableViewCell) -> UITableViewCell
+    var data: [T]?
+    var onSelect: Event?
+    var identifier: String
+    var onRefresh: Refresher?
+    var customRefreshControl: UIRefreshControl!
+    var builder: (T, UITableViewCell) -> UITableViewCell
     
     init(data: [T], builder: @escaping (T, UITableViewCell) -> UITableViewCell) {
         self.data = data
@@ -98,9 +97,25 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
         self.onSelect = selection
         return self
     }
+}
+
+extension UITableView {
+    struct RefreshHolder {
+        static var _refresher: Refresher? = nil
+    }
     
-    func with(refresh: @escaping Refresher) -> LVFlatList {
-        self.onRefresh = refresh
+    @objc private func performRefresh() -> Void {
+        if let refresher = RefreshHolder._refresher {
+            refreshControl?.endRefreshing()
+            refresher()
+        } else {
+            refreshControl?.endRefreshing()
+        }
+    }
+    
+    
+    func on(refresh: @escaping Refresher) {
+        RefreshHolder._refresher = refresh
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(performRefresh), for: .valueChanged)
         
@@ -108,17 +123,6 @@ class LVFlatList<T>: UITableView, UITableViewDataSource, UITableViewDelegate {
             self.refreshControl = refreshControl
         } else {
             self.backgroundView = refreshControl
-        }
-        
-       return self
-    }
-    
-    @objc private func performRefresh() -> Void {
-        if let refresher = onRefresh {
-            refreshControl?.endRefreshing()
-            refresher(self)
-        } else {
-            refreshControl?.endRefreshing()
         }
     }
 }

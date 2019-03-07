@@ -15,17 +15,16 @@
 "aspect" = "Aspect";
 "title" = "Title";
 "what_is_your_goal" = "What is your goal?";
-"motivations" = "Motivations";
-"motivation" = "Motivation";
-"new_motivation" = "New motivation";
 "due_date" = "Due date";
 "work" = "Work";
 "health" = "Health";
-"objective" = "Objective";
-"objectives" = "Objectives";
-"new_objective" = "New Objective";
+"action" = "Action";
+"actions" = "actions";
+"new_action" = "New action";
 "what_is_the_aspect_of_your_goal" = "What's the aspect of your goal?";
 "when_you_should_reach_your_goal" = "When you should reach your goal?";
 
 // GOAL - SHOW
 "delete" = "Delete";
+"not_done_p" = "Not done";
+"done_p" = "Done";
