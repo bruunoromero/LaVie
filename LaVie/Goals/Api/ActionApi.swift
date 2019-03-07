@@ -15,7 +15,7 @@ fileprivate func actionRef(id actionId: String, from goalId: String) -> Document
 class ActionApi {
     static func update(action: Action, from goalId: String, onSuccess: @escaping () -> Void, onError: ErrorHandler? = nil) {
         if let id = action.id {
-            actionRef(id: id, from: goalId).updateData(action.toDocument()) { error in
+            actionRef(id: id, from: goalId).updateData(action.toUpdateDocument()) { error in
                 if let err = error {
                     onError?(err)
                 } else {

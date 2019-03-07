@@ -9,11 +9,7 @@
 import Firebase
 
 protocol Documentable {
-    func toDocument() -> [String:Any]
+    func toCreateDocument() -> [String:Any]
+    func toUpdateDocument() -> [String:Any]
     init(from document: QueryDocumentSnapshot)
-}
-
-protocol Mappable {
-    init(from dictionary: NSDictionary)
-    func toDocument() -> [String:Any]
 }

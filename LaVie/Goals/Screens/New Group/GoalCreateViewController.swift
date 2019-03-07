@@ -42,7 +42,7 @@ class GoalCreateViewController: FormViewController, LVModable {
             return
         }
         
-        let goal = Goal(title: title, aspect: aspect.name, actions: actions, progress: 0.0, dueDate: dueDate)
+        let goal = Goal(title: title, aspect: aspect.name, actions: actions, dueDate: dueDate)
         
         GoalApi.insert(goal: goal, onSucess: self.animatedDismiss)
     }

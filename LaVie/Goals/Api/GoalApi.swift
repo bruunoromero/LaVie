@@ -27,7 +27,7 @@ class GoalApi {
     }
     
     static func insert(goal: Goal, onSucess: @escaping () -> Void, onError: ErrorHandler? = nil) {
-        var goalDocument = goal.toDocument()
+        var goalDocument = goal.toCreateDocument()
         
         goalDocument["progress"] = 0.0
         
@@ -40,7 +40,7 @@ class GoalApi {
                 let batch = Firestore.firestore().batch()
                 goal.actions?.forEach { action in
                     let ref = goalsActionRef(from: goalRef!.documentID).document()
-                    batch.setData(action.toDocument(), forDocument: ref)
+                    batch.setData(action.toCreateDocument(), forDocument: ref)
                 }
                 
                 batch.commit() { error in

@@ -24,10 +24,14 @@ struct Action: Documentable {
         self.isDone = document["isDone"] as! Bool
     }
     
-    func toDocument() -> [String : Any] {
+    func toCreateDocument() -> [String : Any] {
         return [
             "title": self.title,
             "isDone": self.isDone
         ]
+    }
+    
+    func toUpdateDocument() -> [String : Any] {
+        return toCreateDocument()
     }
 }
