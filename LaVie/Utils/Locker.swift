@@ -9,11 +9,7 @@
 class Locker {
     var lockers: [String:Bool] = [:]
     
-    func lock(id: String?, block: () -> Void) {
-        guard let id = id else {
-            return
-        }
-        
+    func lock(_ id: String, block: () -> Void) {
         if lockers.index(forKey: id) == nil {
             lockers[id] = true
             block()
