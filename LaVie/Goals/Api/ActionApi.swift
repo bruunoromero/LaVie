@@ -12,15 +12,23 @@ fileprivate func actionRef(id actionId: String, from goalId: String) -> Document
     return db.collection("goals").document(goalId).collection("actions").document(actionId)
 }
 
+fileprivate let updateLocker = Locker()
+
 class ActionApi {
     static func update(action: Action, from goalId: String, onSuccess: @escaping () -> Void, onError: ErrorHandler? = nil) {
-        if let id = action.id {
-            actionRef(id: id, from: goalId).updateData(action.toUpdateDocument()) { error in
-                if let err = error {
-                    onError?(err)
-                } else {
-                    onSuccess()
+        updateLocker.lock(id: action.id) {
+            if let id = action.id {
+                actionRef(id: id, from: goalId).updateData(action.toUpdateDocument()) { error in
+                    print("HEY")
+                    if let err = error {
+                        onError?(err)
+                    } else {
+                        onSuccess()
+                    }
+                    
+                    updateLocker.unlock(id)
                 }
-            }        }
+            }
+        }
     }
 }

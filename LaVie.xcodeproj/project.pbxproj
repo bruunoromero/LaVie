@@ -44,6 +44,7 @@
 		5DF47ED4221F56ED008F2D88 /* LVTabbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF47ED3221F56ED008F2D88 /* LVTabbable.swift */; };
 		862BDD84713DC841B67CD60E /* Pods_LaVieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90ED558A089D3922BAEEF4B /* Pods_LaVieTests.framework */; };
 		AAF502127DF91870EFFAA634 /* Pods_LaVie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C19F279F09D4B3C8AB4536E /* Pods_LaVie.framework */; };
+		CA08D93F223209DC00E00E51 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08D93E223209DC00E00E51 /* Locker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		5DDC4E8B222CD00C0012A3B6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		5DF47ED3221F56ED008F2D88 /* LVTabbable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVTabbable.swift; sourceTree = "<group>"; };
 		A29E00AAFD6C3EB27072C51F /* Pods-LaVieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieTests.release.xcconfig"; path = "Target Support Files/Pods-LaVieTests/Pods-LaVieTests.release.xcconfig"; sourceTree = "<group>"; };
+		CA08D93E223209DC00E00E51 /* Locker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locker.swift; sourceTree = "<group>"; };
 		E4C00DF236D7FAF0DC2619D8 /* Pods_LaVieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90ED558A089D3922BAEEF4B /* Pods_LaVieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaVieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33D041D97A4BF6EB0C867EB /* Pods-LaVieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaVieUITests.release.xcconfig"; path = "Target Support Files/Pods-LaVieUITests/Pods-LaVieUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				5DDC4E8B222CD00C0012A3B6 /* Date.swift */,
 				5DD87F382230A5D70054B324 /* LVViewModel.swift */,
 				5D5BB78722319C54008823F6 /* Firestore.swift */,
+				CA08D93E223209DC00E00E51 /* Locker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				5D63A8D5221F63C800871932 /* GoalListViewController.swift in Sources */,
 				5D5BB78822319C54008823F6 /* Firestore.swift in Sources */,
 				5D4B5FAD2227055900BA173D /* LVViewControllable.swift in Sources */,
+				CA08D93F223209DC00E00E51 /* Locker.swift in Sources */,
 				5D3F4AE9222324DF00B13FF8 /* Goal.swift in Sources */,
 				5DD87F35223046F30054B324 /* GoalShowViewModel.swift in Sources */,
 				5D032F922228CE51000FCEEC /* Documantable.swift in Sources */,

@@ -17,6 +17,7 @@ class GoalShowViewController: UIViewController, LVPushable {
     var actions: [Action] = []
     var tableView: UITableView!
     var viewModel: GoalShowViewModel!
+    var lockedActions: [String:Bool] = [:]
 
     convenience init(goal: Goal) {
         self.init(title: goal.title)
@@ -79,7 +80,6 @@ class GoalShowViewController: UIViewController, LVPushable {
         ActionApi.update(action: newAction, from: goal.id!, onSuccess: { [unowned self] in
             self.updateActions(updated: newAction)
         })
-        
     }
     
     func setupViewModel() {
