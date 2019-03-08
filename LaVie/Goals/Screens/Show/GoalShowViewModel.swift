@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Material
 import RxDataSources
 
 class GoalShowViewModel: LVViewModel<[ActionSectionModel]> {
@@ -37,6 +38,7 @@ class GoalShowViewModel: LVViewModel<[ActionSectionModel]> {
         let dataSource = RxTableViewSectionedReloadDataSource<ActionSectionModel>(configureCell: { dataSource, tableView, indexPath, action in
             let cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell", for: indexPath) as! ActionCell
             cell.cardTitle.text = action.title
+            cell.isDone = action.isDone
             return cell
         })
 
@@ -53,8 +55,8 @@ class GoalShowViewModel: LVViewModel<[ActionSectionModel]> {
     
     func on(selected: @escaping (Action) -> Void) {
         tableView.rx.modelSelected(Action.self).subscribe(onNext: { element in
-            selected(element)
-        }).disposed(by: disposeBag)
+                selected(element)
+            }).disposed(by: disposeBag)
     }
     
     private func mapActionsToSection(actions: [Action]) {
